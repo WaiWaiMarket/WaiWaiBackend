@@ -71,11 +71,10 @@ public class FeedbackServiceImpl implements FeedbackService {
             IPage<FeedbackDAO> feedbackDAOPage = feedbackMapper.selectPage(page, null);
             return feedbackDAOPage;
         }
-        /*else {
-            IPage<WantDAO> wantDAOIPage = wantMapper.selectByPage(page, userId);
-            return  wantDAOIPage;
-        }*/
-        return null;
+        else {
+            IPage<FeedbackDAO> feedbackDAOPage = feedbackMapper.selectByPage(page, userid);
+            return feedbackDAOPage;
+        }
     }
 
 
