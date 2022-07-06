@@ -22,7 +22,6 @@ public class GoodServiceImpl implements GoodService {
     @Autowired
     UserMapper userMapper;
 
-
     //添加商品
     @Override
     public boolean goodInsert(GoodInsertDTO goodInsertDTO) {
@@ -33,6 +32,7 @@ public class GoodServiceImpl implements GoodService {
         return num >= 1 ? true : false;
     }
 
+    //修改商品
     @Override
     public boolean goodUpdate(GoodUpdateDTO goodUpdateDTO) {
         QueryWrapper queryWrapper = new QueryWrapper();
@@ -45,8 +45,6 @@ public class GoodServiceImpl implements GoodService {
 
         return num >= 1 ? true : false;
     }
-
-
 
 
     //删除商品
