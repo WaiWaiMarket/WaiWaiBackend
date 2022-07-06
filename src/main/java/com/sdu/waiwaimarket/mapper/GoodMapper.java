@@ -9,6 +9,6 @@ import java.util.List;
 
 @Mapper
 public interface GoodMapper extends BaseMapper<GoodDAO> {
-    @Select(" select * from goods where goodsname like’%#{name}%’ ")
+    @Select(" select * from goods where goodsname like '%${name}%' ")
     public List<GoodDAO> goodSelectByName(String name);
 }

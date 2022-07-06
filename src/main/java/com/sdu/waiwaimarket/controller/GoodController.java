@@ -1,6 +1,5 @@
 package com.sdu.waiwaimarket.controller;
 
-
 import com.sdu.waiwaimarket.pojo.GoodInsertDTO;
 import com.sdu.waiwaimarket.pojo.GoodUpdateDTO;
 import com.sdu.waiwaimarket.pojo.GoodVO;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 
 @RestController
 @CrossOrigin
@@ -47,6 +47,7 @@ public class GoodController {
         return new ServerResult(500, "删除商品数据失败！", null);
     }
 
+    //按类别搜索商品
     @RequestMapping(value = "/good/select/categoryid", method = {RequestMethod.GET})
     public ServerResult goodSelectByCategory(Integer id){
         List<GoodVO> goodVOS = goodService.goodSelectByCategory(id);
@@ -54,7 +55,7 @@ public class GoodController {
         return new ServerResult(0, "获取单个商品数据成功！", goodVOS);
     }
 
-
+    //搜索特定商品
     @RequestMapping(value = "/good/select/goodsid", method = {RequestMethod.GET})
     public ServerResult goodSelectById(Integer id){
         GoodVO goodVO = goodService.goodSelectById(id);
@@ -62,12 +63,14 @@ public class GoodController {
         return new ServerResult(0, "获取单个商品数据成功！", goodVO);
     }
 
+    //最新商品
     @RequestMapping(value = "/good/select/new", method = {RequestMethod.GET})
     public ServerResult goodSelectByNew(Integer num){
         List<GoodVO> goodVOS = goodService.goodSelectByNew(num);
         return new ServerResult(0, "获取最新商品数据成功！", goodVOS);
     }
 
+    //模糊查询
     @RequestMapping(value = "/good/select/name", method = {RequestMethod.GET})
     public ServerResult goodSelectByName(String name){
         List<GoodVO> goodVOS = goodService.goodSelectByName(name);

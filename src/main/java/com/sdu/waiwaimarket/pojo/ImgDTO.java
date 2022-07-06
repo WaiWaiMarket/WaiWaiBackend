@@ -1,12 +1,6 @@
 package com.sdu.waiwaimarket.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-
-@TableName("img")
-public class ImgDAO {
-    @TableId(type = IdType.AUTO)
+public class ImgDTO {
     Integer imgsid;
     Integer goodsid;
     String imgurl;
