@@ -6,7 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 
 import java.util.Date;
 
-@TableName("order")
+@TableName("orderinfo")
 public class OrderDAO {
     @TableId(type = IdType.AUTO)
     Integer orderid; //订单编号
