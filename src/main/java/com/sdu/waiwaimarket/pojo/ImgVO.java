@@ -1,12 +1,6 @@
 package com.sdu.waiwaimarket.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-
-@TableName("img")
-public class ImgDAO {
-    @TableId(type = IdType.AUTO)
+public class ImgVO {
     Integer imgsid;
     Integer goodsid;
     String imgurl;
@@ -34,4 +28,5 @@ public class ImgDAO {
     public void setImgurl(String imgurl) {
         this.imgurl = imgurl;
     }
+
 }
