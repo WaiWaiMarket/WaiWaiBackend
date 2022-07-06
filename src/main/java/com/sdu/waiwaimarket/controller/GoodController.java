@@ -1,6 +1,5 @@
 package com.sdu.waiwaimarket.controller;
 
-
 import com.sdu.waiwaimarket.pojo.GoodInsertDTO;
 import com.sdu.waiwaimarket.pojo.GoodUpdateDTO;
 import com.sdu.waiwaimarket.pojo.GoodVO;
@@ -13,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+
 
 @RestController
 @CrossOrigin

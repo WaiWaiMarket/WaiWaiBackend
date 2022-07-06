@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.sdu.waiwaimarket.mapper.CategoryMapper;
 import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
+import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,7 @@ public class GoodServiceImpl implements GoodService {
     @Autowired
     UserMapper userMapper;
 
+
     //添加商品
     @Override
     public boolean goodInsert(GoodInsertDTO goodInsertDTO) {
@@ -31,7 +33,6 @@ public class GoodServiceImpl implements GoodService {
         return num >= 1 ? true : false;
     }
 
-    //修改商品
     @Override
     public boolean goodUpdate(GoodUpdateDTO goodUpdateDTO) {
         QueryWrapper queryWrapper = new QueryWrapper();
@@ -44,6 +45,8 @@ public class GoodServiceImpl implements GoodService {
 
         return num >= 1 ? true : false;
     }
+
+
 
 
     //删除商品

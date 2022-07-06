@@ -1,3 +1,5 @@
+package com.sdu.waiwaimarket;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
