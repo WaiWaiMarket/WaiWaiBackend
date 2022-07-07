@@ -10,6 +10,8 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
@@ -18,6 +20,51 @@ public class UserServiceImpl implements UserService {
     GoodMapper goodMapper;
     @Autowired
     OrderMapper orderMapper;
+
+
+    @Override
+    public Integer UserRegister(UserRegisterDTO userRegisterDTO) {
+
+        //1.判断用户名是否存在，若存在则不能用
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("username",userRegisterDTO.getUsername());
+
+        UserDAO userDAO = userMapper.selectOne(queryWrapper);
+        if(userDAO == null){ //说明用户名不存在，可以使用
+            //2.把用户名和密码保存到数据库
+            UserDAO insertUserDAO = new UserDAO();//userDAO是专门操作数据库的类
+            //insertUserDAO.setName(userDTO.getName());//参数为函数的参数DTO
+            //insertUserDAO.setPassword(userDTO.getPassword());
+            BeanUtils.copyProperties(userRegisterDTO,insertUserDAO);
+            int insertRow = userMapper.insert(insertUserDAO);//最后对数据库实际操作，离不开Mapper的调用
+            if(insertRow==0){//判断操作的行数，>0成功，==0失败
+                throw new RuntimeException("注册,保存数据失败");
+            }else {
+                //3.查询用户的编号
+                //select * from user where name = '' and password = ''
+                QueryWrapper selectQueryWrapper = new QueryWrapper();
+                selectQueryWrapper.eq("username",userRegisterDTO.getUsername());
+                selectQueryWrapper.eq("userpwd",userRegisterDTO.getUserpwd());
+
+                UserDAO selectUserDAO = userMapper.selectOne(selectQueryWrapper);
+                return selectUserDAO.getUserid();
+            }
+
+        }
+        throw new RuntimeException("用户名已经存在");
+    }
+
+    //用户登录
+    @Override
+    public int UserLogin(Integer userid, String userpwd) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("userid",userid);
+
+        UserDAO userDAO = userMapper.selectOne(queryWrapper);
+        if(userDAO.getUserpwd().equals(userpwd))
+            return userid;
+        return -1;
+    }
 
     //用户个人信息修改
     @Override
