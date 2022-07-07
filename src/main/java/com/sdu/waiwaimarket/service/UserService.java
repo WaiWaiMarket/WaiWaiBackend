@@ -4,7 +4,7 @@ import com.sdu.waiwaimarket.pojo.*;
 
 public interface UserService {
     public Integer UserRegister(UserRegisterDTO userRegisterDTO);
-    public int UserLogin(Integer userid,String userpwd);
+    public int UserLogin(String userName,String userpwd);
     public boolean UserDataUpdate(UserDataUpdateDTO userDataUpdateDTO);
     public boolean UserGoodsStatus(UserGoodsStatusDTO userGoodsStatusDTO);
     public UserDataSelectVO UserDataSelect(UserDataSelectDTO userDataSelectDTO);
