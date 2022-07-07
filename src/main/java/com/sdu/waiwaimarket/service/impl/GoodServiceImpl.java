@@ -96,6 +96,7 @@ public class GoodServiceImpl implements GoodService {
             GoodVO goodVO = new GoodVO();
             BeanUtils.copyProperties(goodDAO, goodVO);
             goodVO.setCategoryname(categoryDAO.getCategoryname());
+            goodVO.setCategoryid(categoryDAO.getCategoryid());
             goodVO.setUsername(userDAO.getUsername());
             goodVOS.add(goodVO);
         }
@@ -134,6 +135,7 @@ public class GoodServiceImpl implements GoodService {
     public List<GoodVO> goodSelectByNew(Integer num) {
         //查找相应商品
         QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("1", 1);
         queryWrapper.orderByDesc("goodsdate");
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
@@ -155,8 +157,50 @@ public class GoodServiceImpl implements GoodService {
 
             GoodVO goodVO = new GoodVO();
             BeanUtils.copyProperties(goodDAO, goodVO);
-            goodVO.setCategoryname(categoryDAO.getCategoryname());
-            goodVO.setUsername(userDAO.getUsername());
+            if(categoryDAO != null)
+                goodVO.setCategoryname(categoryDAO.getCategoryname());
+            if(categoryDAO != null)
+                goodVO.setCategoryid(categoryDAO.getCategoryid());
+            if(userDAO != null)
+                goodVO.setUsername(userDAO.getUsername());
+            goodVOS.add(goodVO);
+        }
+
+        return goodVOS;
+    }
+
+    @Override
+    public List<GoodVO> goodSelectByPrice(Integer num) {
+        //查找相应商品
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("1", 1);
+        queryWrapper.orderByAsc("`goodsprice`");
+        List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
+        List<GoodVO> goodVOS = new ArrayList<>();
+        //判断需求数量是否大于数据库数据量
+        if(num > goodDAOS.size())
+            num = goodDAOS.size();
+        goodDAOS = goodDAOS.subList(0, num);
+
+        for(GoodDAO goodDAO:goodDAOS){
+            //查找分类名称
+            QueryWrapper queryWrapper2 = new QueryWrapper();
+            queryWrapper2.eq("categoryid", goodDAO.getCategoryid());
+            CategoryDAO categoryDAO = categoryMapper.selectOne(queryWrapper2);
+
+            //查找卖家姓名
+            QueryWrapper queryWrapper3 = new QueryWrapper();
+            queryWrapper3.eq("userid", goodDAO.getUserid());
+            UserDAO userDAO = userMapper.selectOne(queryWrapper3);
+
+            GoodVO goodVO = new GoodVO();
+            BeanUtils.copyProperties(goodDAO, goodVO);
+            if(categoryDAO != null)
+                goodVO.setCategoryname(categoryDAO.getCategoryname());
+            if(categoryDAO != null)
+                goodVO.setCategoryid(categoryDAO.getCategoryid());
+            if(userDAO != null)
+                goodVO.setUsername(userDAO.getUsername());
             goodVOS.add(goodVO);
         }
 
@@ -183,6 +227,7 @@ public class GoodServiceImpl implements GoodService {
             GoodVO goodVO = new GoodVO();
             BeanUtils.copyProperties(goodDAO, goodVO);
             goodVO.setCategoryname(categoryDAO.getCategoryname());
+            goodVO.setCategoryid(categoryDAO.getCategoryid());
             goodVO.setUsername(userDAO.getUsername());
             goodVOS.add(goodVO);
         }
