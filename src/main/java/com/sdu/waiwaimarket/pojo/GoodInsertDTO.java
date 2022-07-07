@@ -5,7 +5,6 @@ public class GoodInsertDTO {
     Integer userid;             //卖家id
     Integer goodsprice;         //商品价格
     String goodsdesc;           //商品描述
-    String goodsimg;            //商品图片
     Integer goodslevel;         //商品成色
     Integer categoryid;         //商品类型
     Integer goodsstatus;        //商品状态
@@ -42,13 +41,6 @@ public class GoodInsertDTO {
         this.goodsdesc = goodsdesc;
     }
 
-    public String getGoodsimg() {
-        return goodsimg;
-    }
-
-    public void setGoodsimg(String goodsimg) {
-        this.goodsimg = goodsimg;
-    }
 
     public Integer getGoodslevel() {
         return goodslevel;

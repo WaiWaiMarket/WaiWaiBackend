@@ -34,6 +34,21 @@ public class GoodServiceImpl implements GoodService {
         return num >= 1 ? true : false;
     }
 
+    @Override
+    public boolean goodInsertImg(GoodInsertImgDTO insertImgDTO) {
+        Integer id = insertImgDTO.getGoodsid();
+
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsid", id);
+
+        GoodDAO goodDAO = new GoodDAO();
+        goodDAO.setGoodsimg(insertImgDTO.getGoodsimg());
+
+        Integer num = goodMapper.update(goodDAO, queryWrapper);
+
+        return num >= 1 ? true : false;
+    }
+
     //修改商品
     @Override
     public boolean goodUpdate(GoodUpdateDTO goodUpdateDTO) {

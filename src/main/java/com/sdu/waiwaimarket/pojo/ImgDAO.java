@@ -7,16 +7,16 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("img")
 public class ImgDAO {
     @TableId(type = IdType.AUTO)
-    Integer imgsid;
+    Integer imgid;
     Integer goodsid;
     String imgurl;
 
-    public Integer getImgsid() {
-        return imgsid;
+    public Integer getImgid() {
+        return imgid;
     }
 
-    public void setImgsid(Integer imgsid) {
-        this.imgsid = imgsid;
+    public void setImgid(Integer imgid) {
+        this.imgid = imgid;
     }
 
     public Integer getGoodsid() {

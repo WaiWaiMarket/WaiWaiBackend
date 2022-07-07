@@ -1,5 +1,7 @@
 package com.sdu.waiwaimarket.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sdu.waiwaimarket.mapper.ImgMapper;
 import com.sdu.waiwaimarket.pojo.CategoryVO;
 import com.sdu.waiwaimarket.pojo.ImgDAO;
 import com.sdu.waiwaimarket.pojo.ImgVO;
@@ -21,11 +23,20 @@ public class ImgController {
     @Autowired
     ImgService imgService;
 
+    //获取某个商品全部图片
     @RequestMapping(value = "/img/all", method = {RequestMethod.GET})
     public ServerResult getAllImg(Integer id){
         List<ImgVO> imgVOS = imgService.getAllImg(id);
 
         return new ServerResult(0, "获取全部商品图片成功！", imgVOS);
+    }
+
+    //根据图片id获取图片
+    @RequestMapping(value = "/img/one", method = {RequestMethod.GET})
+    public ServerResult getImg(Integer id){
+       ImgVO imgVO = imgService.getImg(id);
+
+       return new ServerResult(0, "获取图片成功！", imgVO);
     }
 
     @Value("${SavePath.ProfilePhoto}")
@@ -64,31 +75,14 @@ public class ImgController {
         return new ServerResult(500, "创建图片失败", null);
     }
 
-//    @GetMapping("/deleteProductImage")
-//    @ResponseBody
-//    public ServerResponse delFile(Integer id,String realUrl) {
-//        //字符串截断，获取图片的名称
-//        int lastIndexOf = realUrl.lastIndexOf("/");
-//        String img_path = realUrl.substring(lastIndexOf + 1, realUrl.length());
-//        //拼接图片的绝对地址
-//        img_path = "D:\\Project\\manager-api\\src\\main\\resources\\static\\images\\" + img_path;
-//
-//        File file = new File(img_path);
-//        //数据库中删除数据
-//        int i = sProductService.deleteProductImage(id);
-//        if(i>0){
-//            if (file.exists()) {//文件是否存在
-//                if (file.delete()) {//存在就删了
-//                    return ServerResponse.createServerResponseBySuccess("删除成功");
-//                } else {
-//                    return ServerResponse.createServerResponseBySuccess("文件删除失败");
-//                }
-//            }else {
-//                return ServerResponse.createServerResponseByFail("文件不存在");
-//            }
-//        }else {
-//            return ServerResponse.createServerResponseByFail("数据删除失败");
-//        }
-//    }
+    @PostMapping("/img/delete")
+    public ServerResult imgDelete(Integer id){
+        boolean isSuccess = imgService.deleteImg(id);
+
+        if (isSuccess)
+            return new ServerResult(0, "成功删除商品图片！",  null);
+        return new ServerResult(500, "删除商品图片失败！", null);
+    }
+
 
 }
