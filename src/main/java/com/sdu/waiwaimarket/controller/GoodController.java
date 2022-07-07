@@ -1,15 +1,10 @@
 package com.sdu.waiwaimarket.controller;
 
-import com.sdu.waiwaimarket.pojo.GoodInsertDTO;
-import com.sdu.waiwaimarket.pojo.GoodUpdateDTO;
-import com.sdu.waiwaimarket.pojo.GoodVO;
-import com.sdu.waiwaimarket.pojo.ServerResult;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -22,7 +17,7 @@ public class GoodController {
 
     //添加商品
     @RequestMapping(value = "/good/insert", method = {RequestMethod.POST})
-    public ServerResult goodInsert(GoodInsertDTO goodInsertDTO){
+    public ServerResult goodInsert(@RequestBody GoodInsertDTO goodInsertDTO){
         boolean isSuccess = goodService.goodInsert(goodInsertDTO);
         if (isSuccess)
             return new ServerResult(0, "成功添加商品数据！",  null);
@@ -31,7 +26,7 @@ public class GoodController {
 
     //修改商品
     @RequestMapping(value = "/good/update", method = {RequestMethod.POST})
-    public ServerResult goodUpdate(GoodUpdateDTO goodUpdateDTO){
+    public ServerResult goodUpdate(@RequestBody GoodUpdateDTO goodUpdateDTO){
         boolean isSuccess = goodService.goodUpdate(goodUpdateDTO);
         if (isSuccess)
             return new ServerResult(0, "成功修改商品数据！",  null);
@@ -39,7 +34,7 @@ public class GoodController {
     }
 
     //删除商品
-    @RequestMapping(value = "/good/delete", method = {RequestMethod.GET})
+    @RequestMapping(value = "/good/delete")
     public ServerResult goodDelete(Integer id){
         boolean isSuccess = goodService.goodDelete(id);
         if (isSuccess)
@@ -75,5 +70,11 @@ public class GoodController {
     public ServerResult goodSelectByName(String name){
         List<GoodVO> goodVOS = goodService.goodSelectByName(name);
         return new ServerResult(0, "查找商品数据成功！", goodVOS);
+    }
+
+    @RequestMapping(value = "/good/selectAllByPage",method = {RequestMethod.GET})
+    public ServerResult goodSelectAllByPage(Integer pageNum, Integer pageSize, String search) {
+        IPage<GoodDAO> goodDAOIPage = goodService.goodSelectAll(pageNum,pageSize,search);
+        return new ServerResult(0,"返回分页内容成功",goodDAOIPage);
     }
 }

@@ -1,5 +1,7 @@
 package com.sdu.waiwaimarket.service;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sdu.waiwaimarket.pojo.GoodDAO;
 import com.sdu.waiwaimarket.pojo.GoodInsertDTO;
 import com.sdu.waiwaimarket.pojo.GoodUpdateDTO;
 import com.sdu.waiwaimarket.pojo.GoodVO;
@@ -14,4 +16,5 @@ public interface GoodService {
     public GoodVO goodSelectById(Integer id);
     public List<GoodVO> goodSelectByNew(Integer num);
     public List<GoodVO> goodSelectByName(String name);
+    public IPage<GoodDAO> goodSelectAll(Integer pageNum, Integer pageSize, String goodsName);
 }
