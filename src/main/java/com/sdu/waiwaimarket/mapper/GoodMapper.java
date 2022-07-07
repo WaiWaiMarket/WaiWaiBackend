@@ -20,7 +20,7 @@ public interface GoodMapper extends BaseMapper<GoodDAO> {
     public List<GoodDAO> goodSelectByName(String name);
 
     @Select("select goods.goodsname, ggoods.userid, user.username, goods.goodsprice, goods.goodsdesc," +
-            " goods.goodsimg, goods.goodslevel, category.categoryname, goods.goodsstatus " +
+            " goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus " +
             "FROM goods, category, user WHERE goods.userid=user.userid" +
             " and goods.categoryid=category.categoryid and goods.categoryid='${id}' ")
     public IPage<GoodVO> goodSelectByCategoryPage(IPage<GoodVO> userPage, @Param("id")Integer id);
@@ -32,7 +32,7 @@ public interface GoodMapper extends BaseMapper<GoodDAO> {
 
 
     @Select("select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc," +
-            " goods.goodsimg, goods.goodslevel, category.categoryname, goods.goodsstatus " +
+            " goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus " +
             "FROM goods, category, user WHERE goods.userid=user.userid" +
             " and goods.categoryid=category.categoryid and goods.goodsname like '%${name}%' ")
     public IPage<GoodVO> selectByPage2(IPage<GoodVO> userPage ,@Param("name")String name);
