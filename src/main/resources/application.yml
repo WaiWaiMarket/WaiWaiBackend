@@ -20,3 +20,5 @@ SavePath:
   ProfilePhoto: '\src\main\resources\static\'  #图标存储路径
   ProfilePhotoMapper: '/image/'  #图标的映射路径
 
+mybatis-plus:
+  mapper-locations: classpath:mappers/*.xml
