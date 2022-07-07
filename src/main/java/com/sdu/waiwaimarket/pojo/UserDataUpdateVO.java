@@ -1,12 +1,6 @@
 package com.sdu.waiwaimarket.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-
-@TableName("user")
-public class UserDAO {
-    @TableId(type = IdType.AUTO)
+public class UserDataUpdateVO {
     Integer userid;
     String stuid;
     String username;
