@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface ImgService {
     public List<ImgVO> getAllImg(Integer id);
+    public ImgVO getImg(Integer id);
     public boolean insertImg(ImgDAO imgDAO);
+    public boolean deleteImg(Integer id);
 }

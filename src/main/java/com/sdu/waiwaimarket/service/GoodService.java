@@ -1,15 +1,13 @@
 package com.sdu.waiwaimarket.service;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
-import com.sdu.waiwaimarket.pojo.GoodDAO;
-import com.sdu.waiwaimarket.pojo.GoodInsertDTO;
-import com.sdu.waiwaimarket.pojo.GoodUpdateDTO;
-import com.sdu.waiwaimarket.pojo.GoodVO;
+import com.sdu.waiwaimarket.pojo.*;
 
 import java.util.List;
 
 public interface GoodService {
     public boolean goodInsert(GoodInsertDTO goodInsertDTO);
+    public boolean goodInsertImg(GoodInsertImgDTO insertImgDTO);
     public boolean goodUpdate(GoodUpdateDTO goodUpdateDTO);
     public boolean goodDelete(Integer id);
     public List<GoodVO> goodSelectByCategory(Integer id);

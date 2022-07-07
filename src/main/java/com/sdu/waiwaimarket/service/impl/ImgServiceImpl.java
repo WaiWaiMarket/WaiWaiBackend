@@ -34,8 +34,28 @@ public class ImgServiceImpl implements ImgService {
     }
 
     @Override
+    public ImgVO getImg(Integer id) {
+
+        ImgDAO imgDAO = imgMapper.selectById(id);
+        ImgVO imgVO = new ImgVO();
+        BeanUtils.copyProperties(imgDAO, imgVO);
+
+        return imgVO;
+    }
+
+    @Override
     public boolean insertImg(ImgDAO imgDAO) {
         Integer num = imgMapper.insert(imgDAO);
+        return num >= 1 ? true : false;
+    }
+
+    @Override
+    public boolean deleteImg(Integer id) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("imgid", id);
+
+        Integer num = imgMapper.delete(queryWrapper);
+
         return num >= 1 ? true : false;
     }
 }

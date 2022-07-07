@@ -24,6 +24,15 @@ public class GoodController {
         return new ServerResult(500, "添加商品数据失败！", null);
     }
 
+    //添加商品主图
+    @RequestMapping(value = "/good/insertImg", method = {RequestMethod.POST})
+    public ServerResult goodInsertImg(GoodInsertImgDTO goodInsertDTO){
+        boolean isSuccess = goodService.goodInsertImg(goodInsertDTO);
+        if (isSuccess)
+            return new ServerResult(0, "成功添加商品主图！",  null);
+        return new ServerResult(500, "添加商品主图失败！", null);
+    }
+
     //修改商品
     @RequestMapping(value = "/good/update", method = {RequestMethod.POST})
     public ServerResult goodUpdate(@RequestBody GoodUpdateDTO goodUpdateDTO){
@@ -34,7 +43,7 @@ public class GoodController {
     }
 
     //删除商品
-    @RequestMapping(value = "/good/delete")
+    @RequestMapping(value = "/good/delete", method = {RequestMethod.GET})
     public ServerResult goodDelete(Integer id){
         boolean isSuccess = goodService.goodDelete(id);
         if (isSuccess)

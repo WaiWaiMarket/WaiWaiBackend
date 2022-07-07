@@ -1,16 +1,16 @@
 package com.sdu.waiwaimarket.pojo;
 
 public class ImgDTO {
-    Integer imgsid;
+    Integer imgid;
     Integer goodsid;
     String imgurl;
 
-    public Integer getImgsid() {
-        return imgsid;
+    public Integer getImgid() {
+        return imgid;
     }
 
-    public void setImgsid(Integer imgsid) {
-        this.imgsid = imgsid;
+    public void setImgid(Integer imgid) {
+        this.imgid = imgid;
     }
 
     public Integer getGoodsid() {
@@ -28,4 +28,5 @@ public class ImgDTO {
     public void setImgurl(String imgurl) {
         this.imgurl = imgurl;
     }
+
 }
