@@ -8,7 +8,7 @@ public class GoodVO {
     String goodsdesc;           //商品描述
     String goodsimg;            //商品图片
     Integer goodslevel;         //商品成色
-    String categoryid;         //商品类别id
+    Integer categoryid;         //商品类别id
     String categoryname;         //商品类型
     Integer goodsstatus;        //商品状态
 
@@ -68,11 +68,11 @@ public class GoodVO {
         this.goodslevel = goodslevel;
     }
 
-    public String getCategoryid() {
+    public Integer getCategoryid() {
         return categoryid;
     }
 
-    public void setCategoryid(String categoryid) {
+    public void setCategoryid(Integer categoryid) {
         this.categoryid = categoryid;
     }
 

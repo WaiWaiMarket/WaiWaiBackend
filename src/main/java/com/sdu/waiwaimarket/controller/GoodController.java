@@ -74,6 +74,13 @@ public class GoodController {
         return new ServerResult(0, "获取最新商品数据成功！", goodVOS);
     }
 
+    //低价好物
+    @RequestMapping(value = "/good/select/price", method = {RequestMethod.GET})
+    public ServerResult goodSelectByPrice(Integer num){
+        List<GoodVO> goodVOS = goodService.goodSelectByPrice(num);
+        return new ServerResult(0, "获取最新低价数据成功！", goodVOS);
+    }
+
     //模糊查询
     @RequestMapping(value = "/good/select/name", method = {RequestMethod.GET})
     public ServerResult goodSelectByName(String name){
