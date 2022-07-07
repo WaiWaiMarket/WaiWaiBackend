@@ -240,6 +240,10 @@ public class GoodServiceImpl implements GoodService {
     public IPage<GoodDAO> goodSelectAll(Integer pageNum, Integer pageSize,String goodsName) {
         Page<GoodDAO> page = new Page(pageNum , pageSize);
         if(goodsName == null) {
+            // 单表查询crud，selectPage
+            /*QueryWrapper queryWrapper2 = new QueryWrapper();
+            queryWrapper2.eq("goodsname", goodsName);
+            IPage<GoodDAO> productIPage = goodMapper.selectPage(page , queryWrapper2);*/
             IPage<GoodDAO> productIPage = goodMapper.selectPage(page , null);
             return productIPage;
         }

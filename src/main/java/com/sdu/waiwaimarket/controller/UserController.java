@@ -22,11 +22,11 @@ public class UserController {
 
     //用户登录
     @RequestMapping("/user/UserLogin")
-    public ServerResult UserLogin(Integer userid, String userpwd){
-        int id = userService.UserLogin(userid, userpwd);
+    public ServerResult UserLogin(String username, String userpwd){
+        int id = userService.UserLogin(username, userpwd);
         if(id>0)
             return new ServerResult(0,"登录成功",id);
-        return new ServerResult(0,"登录失败",null);
+        return new ServerResult(101,"登录失败",-1);
 
     }
     //用户个人信息修改

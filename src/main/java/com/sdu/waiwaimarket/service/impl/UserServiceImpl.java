@@ -56,14 +56,13 @@ public class UserServiceImpl implements UserService {
 
     //用户登录
     @Override
-    public int UserLogin(Integer userid, String userpwd) {
+    public int UserLogin(String userName, String userpwd) {
         QueryWrapper queryWrapper = new QueryWrapper();
-        queryWrapper.eq("userid",userid);
+        queryWrapper.eq("username",userName);
+        queryWrapper.eq("userpwd",userpwd);
 
         UserDAO userDAO = userMapper.selectOne(queryWrapper);
-        if(userDAO.getUserpwd().equals(userpwd))
-            return userid;
-        return -1;
+        return userDAO==null?-1:userDAO.getUserid();
     }
 
     //用户个人信息修改
