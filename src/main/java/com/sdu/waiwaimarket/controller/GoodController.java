@@ -86,4 +86,16 @@ public class GoodController {
         IPage<GoodDAO> goodDAOIPage = goodService.goodSelectAll(pageNum,pageSize,search);
         return new ServerResult(0,"返回分页内容成功",goodDAOIPage);
     }
+
+    @RequestMapping(value = "/good/selectAllByPage2",method = {RequestMethod.GET})
+    public ServerResult goodSelectAllByPage2(Integer pageNum, Integer pageSize, String search) {
+        IPage<GoodVO> goodDAOIPage = goodService.goodSelectAll2(pageNum,pageSize,search);
+        return new ServerResult(0,"返回分页内容成功",goodDAOIPage);
+    }
+
+    @RequestMapping(value = "/good/select/categoryPage",method = {RequestMethod.GET})
+    public ServerResult goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id) {
+        IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum,pageSize, id);
+        return new ServerResult(0,"返回分类分页内容成功！",goodVOIPage);
+    }
 }

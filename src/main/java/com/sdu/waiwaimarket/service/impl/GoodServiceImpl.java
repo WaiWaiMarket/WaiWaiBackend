@@ -190,6 +190,7 @@ public class GoodServiceImpl implements GoodService {
         return goodVOS;
     }
 
+    //分页查询
     @Override
     public IPage<GoodDAO> goodSelectAll(Integer pageNum, Integer pageSize,String goodsName) {
         Page<GoodDAO> page = new Page(pageNum , pageSize);
@@ -201,5 +202,26 @@ public class GoodServiceImpl implements GoodService {
             IPage<GoodDAO> productIPage = goodMapper.selectByPage(page , goodsName);
             return productIPage;
         }
+    }
+
+    @Override
+    public IPage<GoodVO> goodSelectAll2(Integer pageNum, Integer pageSize, String goodsName) {
+        Page<GoodVO> page = new Page(pageNum , pageSize);
+        if(goodsName == null) {
+            IPage<GoodVO> productIPage = goodMapper.selectByPage2(page , null);
+            return productIPage;
+        }
+        else {
+            IPage<GoodVO> productIPage = goodMapper.selectByPage2(page , goodsName);
+            return productIPage;
+        }
+    }
+
+    @Override
+    public IPage<GoodVO> goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id) {
+        Page<GoodVO> page = new Page(pageNum , pageSize);
+        IPage<GoodVO> productIPage = goodMapper.goodSelectByCategoryPage(page, id);
+
+        return productIPage;
     }
 }
