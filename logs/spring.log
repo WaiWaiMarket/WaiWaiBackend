@@ -1,266 +1,252 @@
-2022-07-06 22:18:26.931  INFO 21048 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-IV447R4 with PID 21048 (D:\IdeaProjects\WaiWaiBackend\target\classes started by Taylor swift in D:\IdeaProjects\WaiWaiBackend)
-2022-07-06 22:18:26.935  INFO 21048 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 22:18:28.351  INFO 21048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 22:18:28.359  INFO 21048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 22:18:28.359  INFO 21048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 22:18:28.437  INFO 21048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 22:18:28.437  INFO 21048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1427 ms
-2022-07-06 22:18:30.993  WARN 21048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 22:18:31.019  WARN 21048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.UserDAO.
-2022-07-06 22:18:31.376  INFO 21048 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 22:18:31.441  INFO 21048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 22:18:31.632  WARN 21048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 22:18:31.751  INFO 21048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 22:18:31.756  INFO 21048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 22:18:31.760  INFO 21048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 22:18:31.817  INFO 21048 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 22:18:32.022  INFO 21048 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 5.599 seconds (JVM running for 8.189)
-2022-07-06 22:18:57.050  INFO 21048 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-06 22:18:57.050  INFO 21048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-06 22:18:57.059  INFO 21048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
-2022-07-06 22:19:28.202  INFO 21048 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-06 22:19:28.476  INFO 21048 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-06 22:23:04.202  INFO 17056 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-IV447R4 with PID 17056 (D:\IdeaProjects\WaiWaiBackend\target\classes started by Taylor swift in D:\IdeaProjects\WaiWaiBackend)
-2022-07-06 22:23:04.204  INFO 17056 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 22:23:05.210  INFO 17056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 22:23:05.216  INFO 17056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 22:23:05.216  INFO 17056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 22:23:05.326  INFO 17056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 22:23:05.326  INFO 17056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1065 ms
-2022-07-06 22:23:07.889  WARN 17056 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 22:23:08.284  INFO 17056 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 22:23:08.339  INFO 17056 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 22:23:08.490  WARN 17056 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 22:23:08.535  INFO 17056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 22:23:08.535  INFO 17056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 22:23:08.538  INFO 17056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 22:23:08.556  INFO 17056 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 22:23:08.679  INFO 17056 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 4.836 seconds (JVM running for 6.487)
-2022-07-06 22:23:13.492  INFO 17056 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-06 22:23:13.492  INFO 17056 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-06 22:23:13.500  INFO 17056 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2022-07-06 22:23:21.454  INFO 17056 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-06 22:23:21.578  INFO 17056 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-06 22:32:29.907  INFO 24424 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-IV447R4 with PID 24424 (D:\IdeaProjects\WaiWaiBackend\target\classes started by Taylor swift in D:\IdeaProjects\WaiWaiBackend)
-2022-07-06 22:32:29.909  INFO 24424 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 22:32:31.028  INFO 24424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 22:32:31.036  INFO 24424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 22:32:31.036  INFO 24424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 22:32:31.123  INFO 24424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 22:32:31.124  INFO 24424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1182 ms
-2022-07-06 22:32:33.546  WARN 24424 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 22:32:33.918  INFO 24424 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 22:32:33.989  INFO 24424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 22:32:34.160  WARN 24424 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 22:32:34.219  INFO 24424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 22:32:34.220  INFO 24424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 22:32:34.225  INFO 24424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 22:32:34.273  INFO 24424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 22:32:34.473  INFO 24424 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 4.894 seconds (JVM running for 6.507)
-2022-07-06 22:36:39.687  INFO 6592 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-IV447R4 with PID 6592 (D:\IdeaProjects\WaiWaiBackend\target\classes started by Taylor swift in D:\IdeaProjects\WaiWaiBackend)
-2022-07-06 22:36:39.690  INFO 6592 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 22:36:40.845  INFO 6592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 22:36:40.852  INFO 6592 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 22:36:40.852  INFO 6592 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 22:36:40.993  INFO 6592 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 22:36:40.994  INFO 6592 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1263 ms
-2022-07-06 22:36:44.224  WARN 6592 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 22:36:44.621  INFO 6592 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 22:36:44.738  INFO 6592 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 22:36:44.928  WARN 6592 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 22:36:44.993  INFO 6592 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 22:36:44.994  INFO 6592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 22:36:45.001  INFO 6592 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 22:36:45.037  INFO 6592 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 22:36:45.279  INFO 6592 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 6.062 seconds (JVM running for 7.624)
-2022-07-06 22:36:53.157  INFO 6592 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-06 22:36:53.161  INFO 6592 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-06 22:36:53.193  INFO 6592 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
-2022-07-06 22:36:58.489  INFO 6592 --- [http-nio-9002-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-06 22:36:59.726 ERROR 6592 --- [http-nio-9002-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Exception during pool initialization.
-
-java.sql.SQLSyntaxErrorException: Unknown database 'wwwmarket'
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:120) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:836) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:456) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:246) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.mysql.cj.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:198) ~[mysql-connector-java-8.0.22.jar:8.0.22]
-	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:358) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:206) ~[HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:477) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:560) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:115) [HikariCP-3.4.5.jar:na]
-	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:112) [HikariCP-3.4.5.jar:na]
-	at org.springframework.jdbc.datasource.DataSourceUtils.fetchConnection(DataSourceUtils.java:158) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.doGetConnection(DataSourceUtils.java:116) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.jdbc.datasource.DataSourceUtils.getConnection(DataSourceUtils.java:79) [spring-jdbc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.openConnection(SpringManagedTransaction.java:80) [mybatis-spring-2.0.3.jar:2.0.3]
-	at org.mybatis.spring.transaction.SpringManagedTransaction.getConnection(SpringManagedTransaction.java:67) [mybatis-spring-2.0.3.jar:2.0.3]
-	at org.apache.ibatis.executor.BaseExecutor.getConnection(BaseExecutor.java:336) [mybatis-3.5.3.jar:3.5.3]
-	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.prepareStatement(MybatisSimpleExecutor.java:91) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at com.baomidou.mybatisplus.core.executor.MybatisSimpleExecutor.doQuery(MybatisSimpleExecutor.java:66) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) [mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) [mybatis-3.5.3.jar:3.5.3]
-	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:163) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at com.baomidou.mybatisplus.core.executor.MybatisCachingExecutor.query(MybatisCachingExecutor.java:90) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) [mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) [mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76) [mybatis-3.5.3.jar:3.5.3]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_45]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_45]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_45]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) [mybatis-spring-2.0.3.jar:2.0.3]
-	at com.sun.proxy.$Proxy54.selectOne(Unknown Source) [na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) [mybatis-spring-2.0.3.jar:2.0.3]
-	at com.baomidou.mybatisplus.core.override.MybatisMapperMethod.execute(MybatisMapperMethod.java:108) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at com.baomidou.mybatisplus.core.override.MybatisMapperProxy.invoke(MybatisMapperProxy.java:96) [mybatis-plus-core-3.3.1.jar:3.3.1]
-	at com.sun.proxy.$Proxy61.selectOne(Unknown Source) [na:na]
-	at com.sdu.waiwaimarket.service.impl.UserServiceImpl.UserDataSelect(UserServiceImpl.java:54) [classes/:na]
-	at com.sdu.waiwaimarket.controller.UserController.UserDataSelect(UserController.java:36) [classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_45]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_45]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_45]
-	at java.lang.reflect.Method.invoke(Method.java:497) ~[na:1.8.0_45]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:105) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:878) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:792) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1040) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:943) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:626) [tomcat-embed-core-9.0.41.jar:4.0.FR]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883) [spring-webmvc-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733) [tomcat-embed-core-9.0.41.jar:4.0.FR]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) [tomcat-embed-websocket-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119) [spring-web-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_45]
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_45]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.41.jar:9.0.41]
-	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_45]
-
-2022-07-06 22:55:01.707  INFO 23048 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-IV447R4 with PID 23048 (D:\IdeaProjects\WaiWaiBackend\target\classes started by Taylor swift in D:\IdeaProjects\WaiWaiBackend)
-2022-07-06 22:55:01.713  INFO 23048 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 22:55:03.475  INFO 23048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 22:55:03.484  INFO 23048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 22:55:03.484  INFO 23048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 22:55:03.576  INFO 23048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 22:55:03.577  INFO 23048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1806 ms
-2022-07-06 22:55:06.698  WARN 23048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 22:55:07.237  INFO 23048 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 22:55:07.318  INFO 23048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 22:55:07.610  WARN 23048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 22:55:07.670  INFO 23048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 22:55:07.671  INFO 23048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 22:55:07.674  INFO 23048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 22:55:07.704  INFO 23048 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 22:55:07.890  INFO 23048 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 6.763 seconds (JVM running for 9.694)
-2022-07-06 22:55:14.324  INFO 23048 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-06 22:55:14.324  INFO 23048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-06 22:55:14.332  INFO 23048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2022-07-06 22:55:21.568  INFO 23048 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-06 22:55:22.026  INFO 23048 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-06 23:46:40.122  INFO 26052 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 26052 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
-2022-07-06 23:46:40.127  INFO 26052 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 23:46:41.204  INFO 26052 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 23:46:41.211  INFO 26052 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 23:46:41.212  INFO 26052 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 23:46:41.283  INFO 26052 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 23:46:41.283  INFO 26052 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1069 ms
-2022-07-06 23:46:41.703  WARN 26052 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 23:46:41.944  INFO 26052 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 23:46:41.998  INFO 26052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 23:46:42.093  WARN 26052 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 23:46:42.156  WARN 26052 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9002 is already in use
-2022-07-06 23:46:42.156  INFO 26052 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-06 23:46:42.159  INFO 26052 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-06 23:46:42.167  INFO 26052 --- [main] ConditionEvaluationReportLoggingListener : 
+2022-07-07 00:03:07.629  INFO 24032 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-07 09:56:11.897  INFO 21384 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 21384 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 09:56:11.902  INFO 21384 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 09:56:13.238  INFO 21384 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 09:56:13.245  INFO 21384 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 09:56:13.246  INFO 21384 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 09:56:13.309  INFO 21384 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 09:56:13.309  INFO 21384 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1332 ms
+2022-07-07 09:56:13.594  WARN 21384 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 09:56:13.822  WARN 21384 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+2022-07-07 09:56:13.824  INFO 21384 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-07 09:56:13.831  INFO 21384 --- [main] ConditionEvaluationReportLoggingListener : 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-06 23:46:42.202 ERROR 26052 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2022-07-07 09:56:13.860 ERROR 21384 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-***************************
-APPLICATION FAILED TO START
-***************************
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at com.sdu.waiwaimarket.WaiwaimarketApplication.main(WaiwaimarketApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	... 18 common frames omitted
 
-Description:
+2022-07-07 09:56:38.985  INFO 9672 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 9672 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 09:56:38.988  INFO 9672 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 09:56:39.806  INFO 9672 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 09:56:39.812  INFO 9672 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 09:56:39.813  INFO 9672 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 09:56:39.870  INFO 9672 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 09:56:39.871  INFO 9672 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 850 ms
+2022-07-07 09:56:40.045  WARN 9672 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 09:56:40.183  WARN 9672 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+2022-07-07 09:56:40.185  INFO 9672 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-07 09:56:40.192  INFO 9672 --- [main] ConditionEvaluationReportLoggingListener : 
 
-Web server failed to start. Port 9002 was already in use.
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-07 09:56:40.200 ERROR 9672 --- [main] o.s.boot.SpringApplication               : Application run failed
 
-Action:
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at com.sdu.waiwaimarket.WaiwaimarketApplication.main(WaiwaimarketApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	... 18 common frames omitted
 
-Identify and stop the process that's listening on port 9002 or configure this application to listen on another port.
+2022-07-07 09:57:09.143  INFO 2396 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 2396 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 09:57:09.146  INFO 2396 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 09:57:09.978  INFO 2396 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 09:57:09.984  INFO 2396 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 09:57:09.984  INFO 2396 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 09:57:10.043  INFO 2396 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 09:57:10.043  INFO 2396 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 863 ms
+2022-07-07 09:57:10.223  WARN 2396 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 09:57:10.357  WARN 2396 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+2022-07-07 09:57:10.359  INFO 2396 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2022-07-07 09:57:10.366  INFO 2396 --- [main] ConditionEvaluationReportLoggingListener : 
 
-2022-07-06 23:47:52.294  INFO 5784 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 5784 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
-2022-07-06 23:47:52.296  INFO 5784 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 23:47:53.153  INFO 5784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 23:47:53.159  INFO 5784 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 23:47:53.160  INFO 5784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 23:47:53.221  INFO 5784 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 23:47:53.221  INFO 5784 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 890 ms
-2022-07-06 23:47:53.484  WARN 5784 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 23:47:53.705  INFO 5784 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 23:47:53.752  INFO 5784 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 23:47:53.835  WARN 5784 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 23:47:53.910  INFO 5784 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 23:47:53.911  INFO 5784 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 23:47:53.913  INFO 5784 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 23:47:53.932  INFO 5784 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 23:47:54.230  INFO 5784 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.214 seconds (JVM running for 2.805)
-2022-07-06 23:48:17.289  INFO 5784 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-06 23:48:17.289  INFO 5784 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-06 23:48:17.293  INFO 5784 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2022-07-06 23:48:32.531  INFO 5784 --- [http-nio-9002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-06 23:48:32.760  INFO 5784 --- [http-nio-9002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-06 23:52:55.957  INFO 5784 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-06 23:52:55.959  INFO 5784 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-06 23:52:56.014  INFO 5784 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-06 23:52:58.457  INFO 24032 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 24032 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
-2022-07-06 23:52:58.460  INFO 24032 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-06 23:52:59.307  INFO 24032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-06 23:52:59.313  INFO 24032 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-06 23:52:59.314  INFO 24032 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-06 23:52:59.376  INFO 24032 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-06 23:52:59.376  INFO 24032 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 881 ms
-2022-07-06 23:52:59.653  WARN 24032 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
-2022-07-06 23:52:59.876  INFO 24032 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-06 23:52:59.929  INFO 24032 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-06 23:53:00.023  WARN 24032 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.ImgDAO.
-2022-07-06 23:53:00.083  INFO 24032 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-06 23:53:00.084  INFO 24032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-06 23:53:00.087  INFO 24032 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-06 23:53:00.105  INFO 24032 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-06 23:53:00.265  INFO 24032 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.084 seconds (JVM running for 2.514)
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2022-07-07 09:57:10.373 ERROR 2396 --- [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
+	at com.sdu.waiwaimarket.WaiwaimarketApplication.main(WaiwaimarketApplication.java:10) ~[classes/:na]
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
+	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
+	... 18 common frames omitted
+
+2022-07-07 10:03:52.112  INFO 17084 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 17084 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 10:03:52.114  INFO 17084 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 10:03:52.944  INFO 17084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 10:03:52.950  INFO 17084 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 10:03:52.950  INFO 17084 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 10:03:53.008  INFO 17084 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 10:03:53.009  INFO 17084 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 861 ms
+2022-07-07 10:03:53.176  WARN 17084 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 10:03:53.504  INFO 17084 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-07 10:03:53.554  INFO 17084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:03:53.703  INFO 17084 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-07 10:03:53.704  INFO 17084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-07 10:03:53.706  INFO 17084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-07 10:03:53.726  INFO 17084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-07 10:03:53.909  INFO 17084 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.061 seconds (JVM running for 2.488)
+2022-07-07 10:04:02.518  INFO 17084 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 10:04:02.518  INFO 17084 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 10:04:02.525  INFO 17084 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-07-07 10:04:34.558  INFO 17084 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-07 10:04:34.718  INFO 17084 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-07 10:05:11.363  INFO 17084 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:05:11.364  INFO 17084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-07 10:05:11.368  INFO 17084 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-07 10:05:13.326  INFO 8056 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 8056 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 10:05:13.328  INFO 8056 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 10:05:14.184  INFO 8056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 10:05:14.191  INFO 8056 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 10:05:14.191  INFO 8056 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 10:05:14.249  INFO 8056 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 10:05:14.249  INFO 8056 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 879 ms
+2022-07-07 10:05:14.421  WARN 8056 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 10:05:14.748  INFO 8056 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-07 10:05:14.797  INFO 8056 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:05:14.929  INFO 8056 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-07 10:05:14.929  INFO 8056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-07 10:05:14.932  INFO 8056 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-07 10:05:14.949  INFO 8056 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-07 10:05:15.112  INFO 8056 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.062 seconds (JVM running for 2.499)
+2022-07-07 10:05:33.639  INFO 8056 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 10:05:33.639  INFO 8056 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 10:05:33.643  INFO 8056 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-07 10:05:38.486  INFO 8056 --- [http-nio-9002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-07 10:05:38.581  INFO 8056 --- [http-nio-9002-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-07 10:06:44.082  INFO 8056 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:06:44.084  INFO 8056 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-07 10:06:44.088  INFO 8056 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-07 10:06:46.929  INFO 3164 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 3164 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 10:06:46.932  INFO 3164 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 10:06:47.803  INFO 3164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 10:06:47.809  INFO 3164 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 10:06:47.809  INFO 3164 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 10:06:47.870  INFO 3164 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 10:06:47.870  INFO 3164 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 896 ms
+2022-07-07 10:06:48.052  WARN 3164 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 10:06:48.398  INFO 3164 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-07 10:06:48.453  INFO 3164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:06:48.588  INFO 3164 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-07 10:06:48.593  INFO 3164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-07 10:06:48.596  INFO 3164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-07 10:06:48.618  INFO 3164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-07 10:06:48.782  INFO 3164 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.169 seconds (JVM running for 2.629)
+2022-07-07 10:06:50.795  INFO 3164 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 10:06:50.795  INFO 3164 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 10:06:50.801  INFO 3164 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-07 10:06:50.860  INFO 3164 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-07 10:06:50.941  INFO 3164 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-07 10:08:06.829  INFO 3164 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-07 10:08:06.831  INFO 3164 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-07 10:08:06.835  INFO 3164 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-07 14:20:32.972  INFO 13188 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on DESKTOP-TBK2MLC with PID 13188 (D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend\target\classes started by zhouy in D:\Users\zhouy\IdeaProjects\test\WaiWaiBackend)
+2022-07-07 14:20:32.989  INFO 13188 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-07 14:20:34.009  INFO 13188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-07 14:20:34.015  INFO 13188 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-07 14:20:34.015  INFO 13188 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-07 14:20:34.075  INFO 13188 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-07 14:20:34.075  INFO 13188 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1039 ms
+2022-07-07 14:20:34.335  WARN 13188 --- [main] c.b.m.core.metadata.TableInfoHelper      : Warn: Could not find @TableId in Class: com.sdu.waiwaimarket.pojo.CategoryDAO.
+2022-07-07 14:20:34.628  INFO 13188 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-07 14:20:34.679  INFO 13188 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-07 14:20:34.811  INFO 13188 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-07 14:20:34.812  INFO 13188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-07 14:20:34.814  INFO 13188 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-07 14:20:34.837  INFO 13188 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-07 14:20:35.021  INFO 13188 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.329 seconds (JVM running for 2.794)
+2022-07-07 14:21:48.975  INFO 13188 --- [http-nio-9002-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in the request target [/admin/selectById?adminid={}]. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:490) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:261) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[na:na]
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[na:na]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) ~[tomcat-embed-core-9.0.41.jar:9.0.41]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+
+2022-07-07 14:21:54.135  INFO 13188 --- [http-nio-9002-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-07 14:21:54.135  INFO 13188 --- [http-nio-9002-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-07 14:21:54.138  INFO 13188 --- [http-nio-9002-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-07 14:21:54.197  INFO 13188 --- [http-nio-9002-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-07 14:21:54.284  INFO 13188 --- [http-nio-9002-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
