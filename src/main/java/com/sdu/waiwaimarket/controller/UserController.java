@@ -13,7 +13,22 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    //用户注册
+    @RequestMapping("/user/UserRegister")
+    public ServerResult UserRegister(UserRegisterDTO userRegisterDTO){
+        Integer id = userService.UserRegister(userRegisterDTO);
+        return new ServerResult(0,"注册成功",id);
+    }
 
+    //用户登录
+    @RequestMapping("/user/UserLogin")
+    public ServerResult UserLogin(Integer userid, String userpwd){
+        int id = userService.UserLogin(userid, userpwd);
+        if(id>0)
+            return new ServerResult(0,"登录成功",id);
+        return new ServerResult(0,"登录失败",null);
+
+    }
     //用户个人信息修改
     @RequestMapping("/user/UserDataUpdate")
     public ServerResult UserDataUpdate(UserDataUpdateDTO userDataUpdateDTO){
