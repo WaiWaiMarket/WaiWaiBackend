@@ -44,8 +44,8 @@ public class GoodController {
 
     //删除商品
     @RequestMapping(value = "/good/delete", method = {RequestMethod.GET})
-    public ServerResult goodDelete(Integer id){
-        boolean isSuccess = goodService.goodDelete(id);
+    public ServerResult goodDelete(Integer goodsid){
+        boolean isSuccess = goodService.goodDelete(goodsid);
         if (isSuccess)
             return new ServerResult(0, "成功删除商品数据！",  null);
         return new ServerResult(500, "删除商品数据失败！", null);
@@ -53,16 +53,16 @@ public class GoodController {
 
     //按类别搜索商品
     @RequestMapping(value = "/good/select/categoryid", method = {RequestMethod.GET})
-    public ServerResult goodSelectByCategory(Integer id){
-        List<GoodVO> goodVOS = goodService.goodSelectByCategory(id);
+    public ServerResult goodSelectByCategory(Integer categoryid){
+        List<GoodVO> goodVOS = goodService.goodSelectByCategory(categoryid);
 
         return new ServerResult(0, "获取单个商品数据成功！", goodVOS);
     }
 
     //搜索特定商品
     @RequestMapping(value = "/good/select/goodsid", method = {RequestMethod.GET})
-    public ServerResult goodSelectById(Integer id){
-        GoodVO goodVO = goodService.goodSelectById(id);
+    public ServerResult goodSelectById(Integer goodsid){
+        GoodVO goodVO = goodService.goodSelectById(goodsid);
 
         return new ServerResult(0, "获取单个商品数据成功！", goodVO);
     }
@@ -83,11 +83,17 @@ public class GoodController {
 
     //模糊查询
     @RequestMapping(value = "/good/select/name", method = {RequestMethod.GET})
-    public ServerResult goodSelectByName(String name){
-        List<GoodVO> goodVOS = goodService.goodSelectByName(name);
+    public ServerResult goodSelectByName(String goodsname){
+        List<GoodVO> goodVOS = goodService.goodSelectByName(goodsname);
         return new ServerResult(0, "查找商品数据成功！", goodVOS);
     }
 
+    //热门商品
+    @RequestMapping(value = "/good/select/HOT", method = {RequestMethod.GET})
+    public ServerResult goodSelectByHOT(Integer num){
+        List<GoodVO> goodVOS = goodService.goodSelectByHOT(num);
+        return new ServerResult(0, "查找热门商品数据成功！", goodVOS);
+    }
     //改变商品状态
     @RequestMapping(value = "/good/setGoodStatus", method = {RequestMethod.GET})
     public ServerResult setGoodStatus(Integer goodid, Integer status){
