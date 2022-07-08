@@ -3,6 +3,8 @@ package com.sdu.waiwaimarket.service.impl;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sdu.waiwaimarket.mapper.CategoryMapper;
 import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
@@ -10,10 +12,13 @@ import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.util.ObjectUtils;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class GoodServiceImpl implements GoodService {
@@ -23,15 +28,19 @@ public class GoodServiceImpl implements GoodService {
     CategoryMapper categoryMapper;
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
 
     //添加商品
     @Override
-    public boolean goodInsert(GoodInsertDTO goodInsertDTO) {
+    public Integer goodInsert(GoodInsertDTO goodInsertDTO) {
         GoodDAO goodDAO = new GoodDAO();
         BeanUtils.copyProperties(goodInsertDTO, goodDAO);
+        goodDAO.setGoodsstatus(0);          //商品状态默认0正常
         Integer num = goodMapper.insert(goodDAO);
+        Integer id = goodDAO.getGoodsid();
 
-        return num >= 1 ? true : false;
+        return id;
     }
 
     @Override
@@ -60,6 +69,25 @@ public class GoodServiceImpl implements GoodService {
 
         Integer num = goodMapper.update(goodDAO, queryWrapper);
 
+        Integer id = goodDAO.getGoodsid();
+        //删除指定redis key-value    1
+        String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
+        //如果redis存在则更新
+        if(ObjectUtils.isEmpty(value) == false){
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                GoodVO goodVO = objectMapper.readValue(value, GoodVO.class);
+                BeanUtils.copyProperties(goodUpdateDTO, goodVO);
+                String jsonString = objectMapper.writeValueAsString(goodVO);
+                // 设置1天过期
+                stringRedisTemplate.opsForValue().set(String.valueOf(id), jsonString, 1, TimeUnit.DAYS);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+        }
+
+
+
         return num >= 1 ? true : false;
     }
 
@@ -71,13 +99,35 @@ public class GoodServiceImpl implements GoodService {
         queryWrapper.eq("goodsid", id);
         Integer num = goodMapper.delete(queryWrapper);
 
+        //删除指定redis key-value
+        String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
+        if(ObjectUtils.isEmpty(value) == false)
+            stringRedisTemplate.delete(String.valueOf(id));
+
         return num >= 1 ? true : false;
     }
+
+    //改变商品状态
+    @Override
+    public boolean goodUpdateStatus(Integer goodsid, Integer status) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsid", goodsid);
+
+
+        GoodDAO goodDAO = new GoodDAO();
+        goodDAO.setGoodsstatus(status);
+
+        Integer num = goodMapper.update(goodDAO, queryWrapper);
+
+        return num >= 1 ? true : false;
+    }
+
 
     @Override
     public List<GoodVO> goodSelectByCategory(Integer id) {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("categoryid", id);
+        queryWrapper.ne("goodsstatus", 1);
 
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
@@ -107,28 +157,52 @@ public class GoodServiceImpl implements GoodService {
     //按商品号搜索商品
     @Override
     public GoodVO goodSelectById(Integer id) {
-        //查找商品
-        QueryWrapper queryWrapper = new QueryWrapper();
-        queryWrapper.eq("goodsid", id);
-        GoodDAO goodDAO = goodMapper.selectOne(queryWrapper);
+        //数据不在redis存入redis并设置过期时间为1
+        String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
+        if(ObjectUtils.isEmpty(value)){
+            //查找商品
+            QueryWrapper queryWrapper = new QueryWrapper();
+            queryWrapper.eq("goodsid", id);
+            GoodDAO goodDAO = goodMapper.selectOne(queryWrapper);
 
-        //查找商品分类名称
-        QueryWrapper queryWrapper2 = new QueryWrapper();
-        queryWrapper2.eq("categoryid", goodDAO.getCategoryid());
-        CategoryDAO categoryDAO = categoryMapper.selectOne(queryWrapper2);
+            //查找商品分类名称
+            QueryWrapper queryWrapper2 = new QueryWrapper();
+            queryWrapper2.eq("categoryid", goodDAO.getCategoryid());
+            CategoryDAO categoryDAO = categoryMapper.selectOne(queryWrapper2);
 
-        //查找卖家姓名
-        QueryWrapper queryWrapper3 = new QueryWrapper();
-        queryWrapper3.eq("userid", goodDAO.getUserid());
-        UserDAO userDAO = userMapper.selectOne(queryWrapper3);
+            //查找卖家姓名
+            QueryWrapper queryWrapper3 = new QueryWrapper();
+            queryWrapper3.eq("userid", goodDAO.getUserid());
+            UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
-        //设置GoodVO
-        GoodVO goodVO = new GoodVO();
-        BeanUtils.copyProperties(goodDAO, goodVO);
-        goodVO.setCategoryname(categoryDAO.getCategoryname());
-        goodVO.setUsername(userDAO.getUsername());
+            //设置GoodVO
+            GoodVO goodVO = new GoodVO();
+            BeanUtils.copyProperties(goodDAO, goodVO);
+            if(categoryDAO != null)
+                goodVO.setCategoryname(categoryDAO.getCategoryname());
+            if(categoryDAO != null)
+                goodVO.setCategoryid(categoryDAO.getCategoryid());
+            if(userDAO != null)
+                goodVO.setUsername(userDAO.getUsername());
 
-        return goodVO;
+            ObjectMapper objectMapper = new ObjectMapper();
+            try {
+                String jsonString = objectMapper.writeValueAsString(goodVO);
+                // 设置1天过期
+                stringRedisTemplate.opsForValue().set(String.valueOf(id), jsonString, 1, TimeUnit.DAYS);
+            } catch (JsonProcessingException e) {
+                e.printStackTrace();
+            }
+            return goodVO;
+        }
+        ObjectMapper objectMapper1 = new ObjectMapper();
+        try {
+            GoodVO goodVO = objectMapper1.readValue(value, GoodVO.class);
+            return goodVO;
+        } catch (JsonProcessingException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
@@ -137,6 +211,7 @@ public class GoodServiceImpl implements GoodService {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("1", 1);
         queryWrapper.orderByDesc("goodsdate");
+        queryWrapper.ne("goodsstatus", 1);
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
         //判断需求数量是否大于数据库数据量
@@ -173,8 +248,10 @@ public class GoodServiceImpl implements GoodService {
     public List<GoodVO> goodSelectByPrice(Integer num) {
         //查找相应商品
         QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.ne("goodsstatus", 1);
         queryWrapper.eq("1", 1);
         queryWrapper.orderByAsc("`goodsprice`");
+
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
         //判断需求数量是否大于数据库数据量
@@ -229,6 +306,47 @@ public class GoodServiceImpl implements GoodService {
             goodVO.setCategoryname(categoryDAO.getCategoryname());
             goodVO.setCategoryid(categoryDAO.getCategoryid());
             goodVO.setUsername(userDAO.getUsername());
+            goodVOS.add(goodVO);
+        }
+
+        return goodVOS;
+    }
+
+    @Override
+    public List<GoodVO> goodSelectByHOT(Integer num) {
+        //查找相应商品
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsstatus", 3);
+
+
+        queryWrapper.orderByAsc("`goodsprice`");
+
+        List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
+        List<GoodVO> goodVOS = new ArrayList<>();
+        //判断需求数量是否大于数据库数据量
+        if(num > goodDAOS.size())
+            num = goodDAOS.size();
+        goodDAOS = goodDAOS.subList(0, num);
+
+        for(GoodDAO goodDAO:goodDAOS){
+            //查找分类名称
+            QueryWrapper queryWrapper2 = new QueryWrapper();
+            queryWrapper2.eq("categoryid", goodDAO.getCategoryid());
+            CategoryDAO categoryDAO = categoryMapper.selectOne(queryWrapper2);
+
+            //查找卖家姓名
+            QueryWrapper queryWrapper3 = new QueryWrapper();
+            queryWrapper3.eq("userid", goodDAO.getUserid());
+            UserDAO userDAO = userMapper.selectOne(queryWrapper3);
+
+            GoodVO goodVO = new GoodVO();
+            BeanUtils.copyProperties(goodDAO, goodVO);
+            if(categoryDAO != null)
+                goodVO.setCategoryname(categoryDAO.getCategoryname());
+            if(categoryDAO != null)
+                goodVO.setCategoryid(categoryDAO.getCategoryid());
+            if(userDAO != null)
+                goodVO.setUsername(userDAO.getUsername());
             goodVOS.add(goodVO);
         }
 

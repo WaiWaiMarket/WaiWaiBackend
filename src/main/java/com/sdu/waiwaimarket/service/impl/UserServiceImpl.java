@@ -1,15 +1,20 @@
 package com.sdu.waiwaimarket.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.sdu.waiwaimarket.mapper.FeedbackMapper;
 import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.OrderMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.UserService;
+import com.sun.el.parser.AstFalse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
@@ -20,7 +25,40 @@ public class UserServiceImpl implements UserService {
     GoodMapper goodMapper;
     @Autowired
     OrderMapper orderMapper;
+    @Autowired
+    FeedbackMapper feedbackMapper;
 
+
+    @Override
+    public boolean UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO) {
+        //select * from user where name = '' and password = ''
+        QueryWrapper selectQueryWrapper = new QueryWrapper();
+        selectQueryWrapper.eq("userid",userpwdUpdateDTO.getUserid());
+        selectQueryWrapper.eq("userpwd",userpwdUpdateDTO.getUserpwd());
+        UserDAO userDAO = new UserDAO();
+        userDAO.setUserpwd(userpwdUpdateDTO.getNewpwd());
+        int updateRow = userMapper.update(userDAO, selectQueryWrapper);
+
+        return updateRow>=1?true:false;
+    }
+
+    //查询所有用户
+    @Override
+    public IPage<UserDAO> UserSelectAll(Integer pageNum, Integer pageSize) {
+        Page<UserDAO> page = new Page(pageNum , pageSize);
+        IPage<UserDAO> userIPage = userMapper.userSelectByPage(page);
+        return userIPage;
+    }
+
+    @Override
+    public boolean UserCreateBack(UserCreateBackDTO userCreateBackDTO) {
+        FeedbackDAO feedbackDAO = new FeedbackDAO();
+        feedbackDAO.setOrderid(userCreateBackDTO.getOrderid());
+        feedbackDAO.setFeedbackdesc(userCreateBackDTO.getFeedbackdesc());
+        Integer insertRow = feedbackMapper.insert(feedbackDAO);
+
+        return insertRow >= 1 ? true : false;
+    }
 
     @Override
     public Integer UserRegister(UserRegisterDTO userRegisterDTO) {
@@ -105,26 +143,29 @@ public class UserServiceImpl implements UserService {
 
     //查看某用户的商品信息(卖家查自己上架的商品)
     @Override
-    public UserGoodsSelectVO UserGoodsSelect(UserGoodsSelectDTO userGoodsSelectDTO) {
-        QueryWrapper queryWrapper = new QueryWrapper();
-        queryWrapper.eq("goodsid",userGoodsSelectDTO.getGoodsid());
+    public IPage<GoodDAO> UserGoodsSelect(Integer pageNum, Integer pageSize,Integer userid) {
+        //QueryWrapper queryWrapper = new QueryWrapper();
+        //queryWrapper.eq("userid",userGoodsSelectDTO.getUserid());
+        Page<GoodDAO> page = new Page(pageNum , pageSize);
+        IPage<GoodDAO> productIPage = goodMapper.UserGoodsSelect(page,userid);
+        return productIPage;
 
-        GoodDAO goodDAO = goodMapper.selectOne(queryWrapper);
-        UserGoodsSelectVO userGoodsSelectVO = new UserGoodsSelectVO();
+        /*UserGoodsSelectVO userGoodsSelectVO = new UserGoodsSelectVO();
         BeanUtils.copyProperties(goodDAO,userGoodsSelectVO);
-        return userGoodsSelectVO;
+        return userGoodsSelectVO;*/
 
     }
     //查看某用户的订单信息
     @Override
-    public UserOrderSelectVO UserOrderSelect(UserOrderSelectDTO userOrderSelectDTO) {
-        QueryWrapper queryWrapper = new QueryWrapper();
-        queryWrapper.eq("orderid",userOrderSelectDTO.getOrderid());
-
-        OrderDAO orderDAO = orderMapper.selectOne(queryWrapper);
+    public IPage<OrderDAO> UserOrderSelect(Integer pageNum, Integer pageSize,Integer userid) {
+        //QueryWrapper queryWrapper = new QueryWrapper();
+        //queryWrapper.eq("orderid",userOrderSelectDTO.getOrderid());
+        Page<OrderDAO> page = new Page(pageNum,pageSize);
+        IPage<OrderDAO> orderIPage = orderMapper.UserOrderSelect(page,userid);
+       /* OrderDAO orderDAO = orderMapper.selectOne(queryWrapper);
         UserOrderSelectVO userOrderSelectVO = new UserOrderSelectVO();
-        BeanUtils.copyProperties(orderDAO,userOrderSelectVO);
-        return userOrderSelectVO;
+        BeanUtils.copyProperties(orderDAO,userOrderSelectVO);*/
+        return orderIPage;
 
 
     }

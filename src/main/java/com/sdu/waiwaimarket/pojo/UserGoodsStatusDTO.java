@@ -3,7 +3,15 @@ package com.sdu.waiwaimarket.pojo;
 public class UserGoodsStatusDTO {
     Integer userid;
     Integer goodsid;
-    Integer orderstatus;
+    Integer goodsstatus;
+
+    public Integer getGoodsstatus() {
+        return goodsstatus;
+    }
+
+    public void setGoodsstatus(Integer goodsstatus) {
+        this.goodsstatus = goodsstatus;
+    }
 
     public Integer getUserid() {
         return userid;
@@ -21,11 +29,5 @@ public class UserGoodsStatusDTO {
         this.goodsid = goodsid;
     }
 
-    public Integer getOrderstatus() {
-        return orderstatus;
-    }
 
-    public void setOrderstatus(Integer orderstatus) {
-        this.orderstatus = orderstatus;
-    }
 }
