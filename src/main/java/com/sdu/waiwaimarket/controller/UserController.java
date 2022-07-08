@@ -14,6 +14,15 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    //修改用户密码
+    @RequestMapping("/user/UserpwdUpdate")
+    public ServerResult UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO){
+        boolean isSuccess = userService.UserpwdUpdate(userpwdUpdateDTO);
+        if(isSuccess)
+            return new ServerResult(0,"修改成功",null);
+        return new ServerResult(500,"修改失败",null);
+    }
+
     //查询所有用户
     @RequestMapping("/user/UserSelectByPage")
     public ServerResult userSelectByPage(Integer pageNum, Integer pageSize){
@@ -27,7 +36,7 @@ public class UserController {
         boolean isSuccess = userService.UserCreateBack(userCreateBackDTO);
         if(isSuccess)
             return new ServerResult(0,"生成成功",null);
-        return new ServerResult(0,"生成失败",null);
+        return new ServerResult(500,"生成失败",null);
     }
 
     //用户注册

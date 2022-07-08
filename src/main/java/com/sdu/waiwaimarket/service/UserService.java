@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sdu.waiwaimarket.pojo.*;
 
 public interface UserService {
+    public boolean UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO);
     public IPage<UserDAO> UserSelectAll(Integer pageNum, Integer pageSize);
     public boolean UserCreateBack(UserCreateBackDTO userCreateBackDTO);
     public Integer UserRegister(UserRegisterDTO userRegisterDTO);
