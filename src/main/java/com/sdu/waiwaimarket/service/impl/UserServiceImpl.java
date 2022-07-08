@@ -1,6 +1,7 @@
 package com.sdu.waiwaimarket.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.sdu.waiwaimarket.mapper.FeedbackMapper;
 import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.OrderMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
@@ -10,6 +11,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Service
@@ -20,7 +22,19 @@ public class UserServiceImpl implements UserService {
     GoodMapper goodMapper;
     @Autowired
     OrderMapper orderMapper;
+    @Autowired
+    FeedbackMapper feedbackMapper;
 
+
+    @Override
+    public boolean UserCreateBack(UserCreateBackDTO userCreateBackDTO) {
+        FeedbackDAO feedbackDAO = new FeedbackDAO();
+        feedbackDAO.setOrderid(userCreateBackDTO.getOrderid());
+        feedbackDAO.setFeedbackdesc(userCreateBackDTO.getFeedbackdesc());
+        Integer insertRow = feedbackMapper.insert(feedbackDAO);
+
+        return insertRow >= 1 ? true : false;
+    }
 
     @Override
     public Integer UserRegister(UserRegisterDTO userRegisterDTO) {

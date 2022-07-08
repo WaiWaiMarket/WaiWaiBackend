@@ -13,6 +13,15 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    //用户根据订单生成反馈
+    @RequestMapping("/user/UserCreateBack")
+    public ServerResult UserCreateBack(UserCreateBackDTO userCreateBackDTO){
+        boolean isSuccess = userService.UserCreateBack(userCreateBackDTO);
+        if(isSuccess)
+            return new ServerResult(0,"生成成功",null);
+        return new ServerResult(0,"生成失败",null);
+    }
+
     //用户注册
     @RequestMapping("/user/UserRegister")
     public ServerResult UserRegister(UserRegisterDTO userRegisterDTO){
