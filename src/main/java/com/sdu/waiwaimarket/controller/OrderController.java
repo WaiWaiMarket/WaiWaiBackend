@@ -69,6 +69,7 @@ public class OrderController {
     @RequestMapping(value = "/order/select/AllByPage",method = {RequestMethod.GET})
     public ServerResult orderSelectAllByPage(Integer pageNum, Integer pageSize) {
         IPage<OrderVO> orderVOIPage = orderService.orderSelectAllByPage(pageNum,pageSize);
+
         return new ServerResult(0,"返回分类分页内容成功！",orderVOIPage);
     }
 
