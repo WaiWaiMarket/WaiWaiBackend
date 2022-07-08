@@ -2,6 +2,7 @@ package com.sdu.waiwaimarket.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sdu.waiwaimarket.pojo.GoodVO;
 import com.sdu.waiwaimarket.pojo.OrderDAO;
 import com.sdu.waiwaimarket.pojo.OrderVO;
@@ -23,4 +24,7 @@ public interface OrderMapper extends BaseMapper<OrderDAO> {
             "g1.goodsname,g1.goodsprice from orderinfo o1,user u1, user u2,goods g1 where o1.buyid=u1.userid and " +
             "o1.sellid=u2.userid and o1.goodsid=g1.goodsid")
     public IPage<OrderVO> orderSelectAllByPage(IPage<OrderVO> userPage);
+
+    @Select("select * from orderinfo where buyid = #{buyid}")
+    public IPage<OrderDAO> UserOrderSelect(IPage<OrderDAO> orderDAOIPage, @Param("buyid")Integer buyid);
 }
