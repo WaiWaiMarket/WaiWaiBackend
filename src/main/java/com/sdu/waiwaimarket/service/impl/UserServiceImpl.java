@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
         selectQueryWrapper.eq("userid",userpwdUpdateDTO.getUserid());
         selectQueryWrapper.eq("userpwd",userpwdUpdateDTO.getUserpwd());
         UserDAO userDAO = new UserDAO();
+        userDAO.setUserid(userpwdUpdateDTO.getUserid());
         userDAO.setUserpwd(userpwdUpdateDTO.getNewpwd());
         int updateRow = userMapper.update(userDAO, selectQueryWrapper);
 

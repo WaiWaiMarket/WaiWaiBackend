@@ -5,6 +5,7 @@ import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -16,7 +17,7 @@ public class UserController {
 
     //修改用户密码
     @RequestMapping("/user/UserpwdUpdate")
-    public ServerResult UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO){
+    public ServerResult UserpwdUpdate(@RequestBody UserpwdUpdateDTO userpwdUpdateDTO){
         boolean isSuccess = userService.UserpwdUpdate(userpwdUpdateDTO);
         if(isSuccess)
             return new ServerResult(0,"修改成功",null);
@@ -57,7 +58,7 @@ public class UserController {
     }
     //用户个人信息修改
     @RequestMapping("/user/UserDataUpdate")
-    public ServerResult UserDataUpdate(UserDataUpdateDTO userDataUpdateDTO){
+    public ServerResult UserDataUpdate(@RequestBody UserDataUpdateDTO userDataUpdateDTO){
         boolean isSuccess = userService.UserDataUpdate(userDataUpdateDTO);
         if(isSuccess)
             return new ServerResult(0,"个人信息修改成功",null);
