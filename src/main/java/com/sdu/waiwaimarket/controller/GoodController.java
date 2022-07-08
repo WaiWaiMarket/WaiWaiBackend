@@ -35,7 +35,7 @@ public class GoodController {
 
     //修改商品
     @RequestMapping(value = "/good/update", method = {RequestMethod.POST})
-    public ServerResult goodUpdate(@RequestBody GoodUpdateDTO goodUpdateDTO){
+    public ServerResult goodUpdate(GoodUpdateDTO goodUpdateDTO){
         boolean isSuccess = goodService.goodUpdate(goodUpdateDTO);
         if (isSuccess)
             return new ServerResult(0, "成功修改商品数据！",  null);
