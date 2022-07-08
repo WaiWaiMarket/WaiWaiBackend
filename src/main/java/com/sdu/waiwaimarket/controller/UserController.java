@@ -1,5 +1,6 @@
 package com.sdu.waiwaimarket.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @Autowired
     UserService userService;
+
+    //查询所有用户
+    @RequestMapping("/user/UserSelectByPage")
+    public ServerResult userSelectByPage(Integer pageNum, Integer pageSize){
+        IPage<UserDAO> userDAOIPage = userService.UserSelectAll(pageNum,pageSize);
+        return new ServerResult(0,"返回分页内容成功",userDAOIPage);
+    }
 
     //用户根据订单生成反馈
     @RequestMapping("/user/UserCreateBack")
