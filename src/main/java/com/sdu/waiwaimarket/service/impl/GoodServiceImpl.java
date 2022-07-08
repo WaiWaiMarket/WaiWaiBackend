@@ -10,6 +10,7 @@ import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,16 +24,19 @@ public class GoodServiceImpl implements GoodService {
     CategoryMapper categoryMapper;
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
 
     //添加商品
     @Override
-    public boolean goodInsert(GoodInsertDTO goodInsertDTO) {
+    public Integer goodInsert(GoodInsertDTO goodInsertDTO) {
         GoodDAO goodDAO = new GoodDAO();
         BeanUtils.copyProperties(goodInsertDTO, goodDAO);
         goodDAO.setGoodsstatus(0);          //商品状态默认0正常
         Integer num = goodMapper.insert(goodDAO);
+        Integer id = goodDAO.getGoodsid();
 
-        return num >= 1 ? true : false;
+        return id;
     }
 
     @Override
