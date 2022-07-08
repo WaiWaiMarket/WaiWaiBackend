@@ -9,6 +9,7 @@ import com.sdu.waiwaimarket.mapper.OrderMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.UserService;
+import com.sun.el.parser.AstFalse;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,6 +28,19 @@ public class UserServiceImpl implements UserService {
     @Autowired
     FeedbackMapper feedbackMapper;
 
+
+    @Override
+    public boolean UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO) {
+        //select * from user where name = '' and password = ''
+        QueryWrapper selectQueryWrapper = new QueryWrapper();
+        selectQueryWrapper.eq("userid",userpwdUpdateDTO.getUserid());
+        selectQueryWrapper.eq("userpwd",userpwdUpdateDTO.getUserpwd());
+        UserDAO userDAO = new UserDAO();
+        userDAO.setUserpwd(userpwdUpdateDTO.getNewpwd());
+        int updateRow = userMapper.update(userDAO, selectQueryWrapper);
+
+        return updateRow>=1?true:false;
+    }
 
     //查询所有用户
     @Override
