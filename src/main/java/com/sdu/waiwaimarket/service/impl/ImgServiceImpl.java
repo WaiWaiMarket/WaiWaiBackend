@@ -46,6 +46,7 @@ public class ImgServiceImpl implements ImgService {
     @Override
     public boolean insertImg(ImgDAO imgDAO) {
         Integer num = imgMapper.insert(imgDAO);
+
         return num >= 1 ? true : false;
     }
 
