@@ -1,6 +1,8 @@
 package com.sdu.waiwaimarket.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sdu.waiwaimarket.mapper.FeedbackMapper;
 import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.OrderMapper;
@@ -25,6 +27,14 @@ public class UserServiceImpl implements UserService {
     @Autowired
     FeedbackMapper feedbackMapper;
 
+
+    //查询所有用户
+    @Override
+    public IPage<UserDAO> UserSelectAll(Integer pageNum, Integer pageSize) {
+        Page<UserDAO> page = new Page(pageNum , pageSize);
+        IPage<UserDAO> userIPage = userMapper.userSelectByPage(page);
+        return userIPage;
+    }
 
     @Override
     public boolean UserCreateBack(UserCreateBackDTO userCreateBackDTO) {
