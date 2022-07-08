@@ -11,8 +11,8 @@ public class OrderVO {
     Date orderdate; //订单日期
     String buyername; //买家姓名
     String sellername; //卖家姓名
-    String goodname; //商品名称
-    Integer goodprice; //商品价格
+    String goodsname; //商品名称
+    Integer goodsprice; //商品价格
 
     public Integer getOrderid() {
         return orderid;
@@ -79,18 +79,18 @@ public class OrderVO {
     }
 
     public String getGoodname() {
-        return goodname;
+        return goodsname;
     }
 
     public void setGoodname(String goodname) {
-        this.goodname = goodname;
+        this.goodsname = goodname;
     }
 
     public Integer getGoodprice() {
-        return goodprice;
+        return goodsprice;
     }
 
     public void setGoodprice(Integer goodprice) {
-        this.goodprice = goodprice;
+        this.goodsprice = goodprice;
     }
 }

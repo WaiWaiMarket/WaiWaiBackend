@@ -59,34 +59,34 @@ public class OrderServiceImpl implements OrderService {
         return deleteRow>=1?true:false;
     }
 
-    @Override
-    public List<OrderVO> orderSelectByUserId(Integer userId) {
-        List<OrderDAO> daoList = orderMapper.selectList(null);
-
-        ArrayList<OrderVO> voList = new ArrayList<>();
-        for (OrderDAO orderDAO:daoList) {
-            QueryWrapper goodQueryWrapper = new QueryWrapper();
-            goodQueryWrapper.eq("goodsid",orderDAO.getOrderid());
-            QueryWrapper buyQueryWrapper = new QueryWrapper();
-            buyQueryWrapper.eq("userid",orderDAO.getOrderid());
-            QueryWrapper sellQueryWrapper = new QueryWrapper();
-            sellQueryWrapper.eq("userid",orderDAO.getOrderid());
-
-            GoodDAO goodDAO = goodMapper.selectOne(goodQueryWrapper);
-            UserDAO buyerDAO = userMapper.selectOne(buyQueryWrapper);
-            UserDAO sellerDAO=userMapper.selectOne(sellQueryWrapper);
-
-            OrderVO orderVO = new OrderVO();
-            orderVO.setBuyername(buyerDAO.getUsername());
-            orderVO.setSellername(sellerDAO.getUsername());
-            orderVO.setGoodname(goodDAO.getGoodsname());
-            orderVO.setGoodprice(goodDAO.getGoodsprice());
-            BeanUtils.copyProperties(orderDAO,orderVO);
-            voList.add(orderVO);
-        }
-        //3,返回voList
-        return voList;
-    }
+//    @Override
+//    public List<OrderVO> orderSelectByUserId(Integer userId) {
+//        List<OrderDAO> daoList = orderMapper.selectList(null);
+//
+//        ArrayList<OrderVO> voList = new ArrayList<>();
+//        for (OrderDAO orderDAO:daoList) {
+//            QueryWrapper goodQueryWrapper = new QueryWrapper();
+//            goodQueryWrapper.eq("goodsid",orderDAO.getOrderid());
+//            QueryWrapper buyQueryWrapper = new QueryWrapper();
+//            buyQueryWrapper.eq("userid",orderDAO.getOrderid());
+//            QueryWrapper sellQueryWrapper = new QueryWrapper();
+//            sellQueryWrapper.eq("userid",orderDAO.getOrderid());
+//
+//            GoodDAO goodDAO = goodMapper.selectOne(goodQueryWrapper);
+//            UserDAO buyerDAO = userMapper.selectOne(buyQueryWrapper);
+//            UserDAO sellerDAO=userMapper.selectOne(sellQueryWrapper);
+//
+//            OrderVO orderVO = new OrderVO();
+//            orderVO.setBuyername(buyerDAO.getUsername());
+//            orderVO.setSellername(sellerDAO.getUsername());
+//            orderVO.setGoodname(goodDAO.getGoodsname());
+//            orderVO.setGoodprice(goodDAO.getGoodsprice());
+//            BeanUtils.copyProperties(orderDAO,orderVO);
+//            voList.add(orderVO);
+//        }
+//        //3,返回voList
+//        return voList;
+//    }
 
     @Override
     public IPage<OrderVO> orderSelectByUserIdPage(Integer pageNum, Integer pageSize, Integer userId) {
@@ -96,34 +96,34 @@ public class OrderServiceImpl implements OrderService {
         return productIPage;
     }
 
-    @Override
-    public List<OrderVO> orderSelectAll() {
-        List<OrderDAO> daoList = orderMapper.selectList(null);
-
-        ArrayList<OrderVO> voList = new ArrayList<>();
-        for (OrderDAO orderDAO:daoList) {
-            QueryWrapper goodQueryWrapper = new QueryWrapper();
-            goodQueryWrapper.eq("goodsid",orderDAO.getOrderid());
-            QueryWrapper buyQueryWrapper = new QueryWrapper();
-            buyQueryWrapper.eq("userid",orderDAO.getOrderid());
-            QueryWrapper sellQueryWrapper = new QueryWrapper();
-            sellQueryWrapper.eq("userid",orderDAO.getOrderid());
-
-            GoodDAO goodDAO = goodMapper.selectOne(goodQueryWrapper);
-            UserDAO buyerDAO = userMapper.selectOne(buyQueryWrapper);
-            UserDAO sellerDAO=userMapper.selectOne(sellQueryWrapper);
-
-            OrderVO orderVO = new OrderVO();
-            orderVO.setBuyername(buyerDAO.getUsername());
-            orderVO.setSellername(sellerDAO.getUsername());
-            orderVO.setGoodname(goodDAO.getGoodsname());
-            orderVO.setGoodprice(goodDAO.getGoodsprice());
-            BeanUtils.copyProperties(orderDAO,orderVO);
-            voList.add(orderVO);
-        }
-        //3,返回voList
-        return voList;
-    }
+//    @Override
+//    public List<OrderVO> orderSelectAll() {
+//        List<OrderDAO> daoList = orderMapper.selectList(null);
+//
+//        ArrayList<OrderVO> voList = new ArrayList<>();
+//        for (OrderDAO orderDAO:daoList) {
+//            QueryWrapper goodQueryWrapper = new QueryWrapper();
+//            goodQueryWrapper.eq("goodsid",orderDAO.getOrderid());
+//            QueryWrapper buyQueryWrapper = new QueryWrapper();
+//            buyQueryWrapper.eq("userid",orderDAO.getOrderid());
+//            QueryWrapper sellQueryWrapper = new QueryWrapper();
+//            sellQueryWrapper.eq("userid",orderDAO.getOrderid());
+//
+//            GoodDAO goodDAO = goodMapper.selectOne(goodQueryWrapper);
+//            UserDAO buyerDAO = userMapper.selectOne(buyQueryWrapper);
+//            UserDAO sellerDAO=userMapper.selectOne(sellQueryWrapper);
+//
+//            OrderVO orderVO = new OrderVO();
+//            orderVO.setBuyername(buyerDAO.getUsername());
+//            orderVO.setSellername(sellerDAO.getUsername());
+//            orderVO.setGoodname(goodDAO.getGoodsname());
+//            orderVO.setGoodprice(goodDAO.getGoodsprice());
+//            BeanUtils.copyProperties(orderDAO,orderVO);
+//            voList.add(orderVO);
+//        }
+//        //3,返回voList
+//        return voList;
+//    }
 
     @Override
     public IPage<OrderVO> orderSelectAllByPage(Integer pageNum, Integer pageSize) {

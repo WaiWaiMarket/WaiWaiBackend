@@ -48,11 +48,11 @@ public class OrderController {
         }
     }
 
-    @RequestMapping(value = "/order/selectByUserId",method = {RequestMethod.GET})
-    public ServerResult orderSelectByUserId(Integer userId){
-        List<OrderVO> voList = orderService.orderSelectByUserId(userId);
-        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
-    }
+//    @RequestMapping(value = "/order/selectByUserId",method = {RequestMethod.GET})
+//    public ServerResult orderSelectByUserId(Integer userId){
+//        List<OrderVO> voList = orderService.orderSelectByUserId(userId);
+//        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
+//    }
 
     @RequestMapping(value = "/order/select/userIdPage",method = {RequestMethod.GET})
     public ServerResult orderSelectByUserIdPage(Integer pageNum, Integer pageSize, Integer userId) {
@@ -60,11 +60,11 @@ public class OrderController {
         return new ServerResult(0,"返回分类分页内容成功！",orderVOIPage);
     }
 
-    @RequestMapping(value = "/order/select/All",method = {RequestMethod.GET})
-    public ServerResult orderSelectAll(){
-        List<OrderVO> voList = orderService.orderSelectAll();
-        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
-    }
+//    @RequestMapping(value = "/order/select/All",method = {RequestMethod.GET})
+//    public ServerResult orderSelectAll(){
+//        List<OrderVO> voList = orderService.orderSelectAll();
+//        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
+//    }
 
     @RequestMapping(value = "/order/select/AllByPage",method = {RequestMethod.GET})
     public ServerResult orderSelectAllByPage(Integer pageNum, Integer pageSize) {
