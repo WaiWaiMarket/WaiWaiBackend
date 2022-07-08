@@ -16,6 +16,7 @@ public interface GoodService {
     public List<GoodVO> goodSelectByNew(Integer num);
     public List<GoodVO> goodSelectByPrice(Integer num);
     public List<GoodVO> goodSelectByName(String name);
+    public List<GoodVO> goodSelectByHOT(Integer num);
     public IPage<GoodDAO> goodSelectAll(Integer pageNum, Integer pageSize, String goodsName);
     public IPage<GoodVO> goodSelectAll2(Integer pageNum, Integer pageSize, String goodsName);
     public IPage<GoodVO> goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id);
