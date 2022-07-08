@@ -1808,6 +1808,34 @@ Was expecting one of:
 2022-07-08 13:53:37.021  INFO 17188 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 2022-07-08 13:53:37.101  INFO 17188 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2022-07-08 13:53:37.261  INFO 17188 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 22:05:49.129  INFO 32956 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 22:05:49.139  INFO 32956 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 22:05:49.147  INFO 32956 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 22:06:06.592  INFO 30424 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 30424 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 22:06:06.594  INFO 30424 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 22:06:07.230  INFO 30424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-08 22:06:07.231  INFO 30424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-08 22:06:07.255  INFO 30424 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2022-07-08 22:06:07.652  INFO 30424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 22:06:07.659  INFO 30424 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 22:06:07.659  INFO 30424 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 22:06:07.756  INFO 30424 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 22:06:07.757  INFO 30424 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1137 ms
+2022-07-08 22:06:08.671  INFO 30424 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 22:06:08.758  INFO 30424 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 22:06:08.975  INFO 30424 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 22:06:08.977  INFO 30424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 22:06:08.980  INFO 30424 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 22:06:09.014  INFO 30424 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 22:06:09.044  INFO 30424 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 22:06:09.046  INFO 30424 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 22:06:09.052  INFO 30424 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-08 22:06:09.298  INFO 30424 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.973 seconds (JVM running for 3.733)
+2022-07-08 22:06:16.167  INFO 30424 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 22:06:16.278  INFO 30424 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 22:06:45.033  INFO 30424 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 22:06:45.042  INFO 30424 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 22:06:45.051  INFO 30424 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
 2022-07-08 21:14:00.868  INFO 5144 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 5144 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
 2022-07-08 21:14:00.871  INFO 5144 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
 2022-07-08 21:14:01.592  INFO 5144 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
