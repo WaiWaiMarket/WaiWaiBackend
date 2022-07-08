@@ -1,20 +1,10 @@
 package com.sdu.waiwaimarket.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
-
-import java.util.Date;
-
-@TableName("feedback")
-public class FeedbackDAO {
-    @TableId(type = IdType.AUTO)
-    Integer feedbackid;
-    Integer orderid;
+public class FeedbackInsertDTO {
     Integer userid;
+    Integer orderid;
     String feedbackdesc;
     Integer feedbackstatus;
-    Date feedbackdate;
 
     public Integer getUserid() {
         return userid;
@@ -22,14 +12,6 @@ public class FeedbackDAO {
 
     public void setUserid(Integer userid) {
         this.userid = userid;
-    }
-
-    public Integer getFeedbackid() {
-        return feedbackid;
-    }
-
-    public void setFeedbackid(Integer feedbackid) {
-        this.feedbackid = feedbackid;
     }
 
     public Integer getOrderid() {
@@ -54,13 +36,5 @@ public class FeedbackDAO {
 
     public void setFeedbackstatus(Integer feedbackstatus) {
         this.feedbackstatus = feedbackstatus;
-    }
-
-    public Date getFeedbackdate() {
-        return feedbackdate;
-    }
-
-    public void setFeedbackdate(Date feedbackdate) {
-        this.feedbackdate = feedbackdate;
     }
 }
