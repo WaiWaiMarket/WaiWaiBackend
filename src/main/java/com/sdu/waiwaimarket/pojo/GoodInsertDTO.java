@@ -25,6 +25,7 @@ public class GoodInsertDTO {
         this.userid = userid;
     }
 
+
     public Integer getGoodsprice() {
         return goodsprice;
     }
