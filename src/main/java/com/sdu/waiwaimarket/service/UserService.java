@@ -12,6 +12,6 @@ public interface UserService {
     public boolean UserDataUpdate(UserDataUpdateDTO userDataUpdateDTO);
     public boolean UserGoodsStatus(UserGoodsStatusDTO userGoodsStatusDTO);
     public UserDataSelectVO UserDataSelect(UserDataSelectDTO userDataSelectDTO);
-    public UserGoodsSelectVO UserGoodsSelect(UserGoodsSelectDTO userGoodsSelectDTO);
-    public UserOrderSelectVO UserOrderSelect(UserOrderSelectDTO userOrderSelectDTO);
+    public IPage<GoodDAO> UserGoodsSelect(Integer pageNum, Integer pageSize,Integer userid);
+    public IPage<OrderDAO> UserOrderSelect(Integer pageNum, Integer pageSize,Integer userid);
 }
