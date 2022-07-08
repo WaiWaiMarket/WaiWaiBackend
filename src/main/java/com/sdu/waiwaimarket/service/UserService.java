@@ -3,6 +3,7 @@ package com.sdu.waiwaimarket.service;
 import com.sdu.waiwaimarket.pojo.*;
 
 public interface UserService {
+    public boolean UserCreateBack(UserCreateBackDTO userCreateBackDTO);
     public Integer UserRegister(UserRegisterDTO userRegisterDTO);
     public int UserLogin(String userName,String userpwd);
     public boolean UserDataUpdate(UserDataUpdateDTO userDataUpdateDTO);
