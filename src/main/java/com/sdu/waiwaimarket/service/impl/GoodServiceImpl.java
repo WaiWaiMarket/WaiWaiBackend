@@ -70,7 +70,7 @@ public class GoodServiceImpl implements GoodService {
         Integer num = goodMapper.update(goodDAO, queryWrapper);
 
         Integer id = goodDAO.getGoodsid();
-        //删除指定redis key-value
+        //删除指定redis key-value    1
         String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
         //如果redis存在则更新
         if(ObjectUtils.isEmpty(value) == false){
