@@ -37,16 +37,22 @@ public class FeedbackController {
         }
     }
 
-    @RequestMapping(value = "/feedback/feedbackSelectByuserId",method = {RequestMethod.POST})
+    @RequestMapping(value = "/feedback/SelectByuserId",method = {RequestMethod.POST})
     public  ServerResult feedbackSelectByuserId(Integer id){
         List<FeedbackVO> feedbackVOS = feedbackService.feedbackSelectByuserId(id);
         return new ServerResult(0,"查询成功",feedbackVOS);
     }
 
-    @RequestMapping(value = "/feedback/feedbackSelectByorderId",method = {RequestMethod.POST})
+    @RequestMapping(value = "/feedback/SelectByorderId",method = {RequestMethod.POST})
     public ServerResult feedbackSelectByorderId(Integer id){
         FeedbackVO feedbackVO = feedbackService.feedbackSelectByorderId(id);
         return new ServerResult(0,"查询成功",feedbackVO);
+    }
+
+    @RequestMapping(value = "/feedback/SelectAllByPage",method = {RequestMethod.POST})
+    public ServerResult feedbackSelectAllByPage(Integer pageNum, Integer pageSize, Integer userId){
+        IPage<FeedbackDAO> feedbackDAOIPage = feedbackService.feedbackSelectAll(pageNum, pageSize, userId);
+        return new ServerResult(0,"查询成功",feedbackDAOIPage);
     }
 
 }

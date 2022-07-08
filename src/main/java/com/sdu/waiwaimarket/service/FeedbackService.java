@@ -1,9 +1,7 @@
 package com.sdu.waiwaimarket.service;
 
-import com.sdu.waiwaimarket.pojo.AdminDTO;
-import com.sdu.waiwaimarket.pojo.FeedbackDAO;
-import com.sdu.waiwaimarket.pojo.FeedbackInsertDTO;
-import com.sdu.waiwaimarket.pojo.FeedbackVO;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.sdu.waiwaimarket.pojo.*;
 
 import java.util.List;
 
@@ -13,4 +11,5 @@ public interface FeedbackService {
     public boolean feedbackDelete(Integer feedbackid);
     public List<FeedbackVO> feedbackSelectByuserId(Integer userid);
     public FeedbackVO feedbackSelectByorderId(Integer orderid);
+    public IPage<FeedbackDAO> feedbackSelectAll(Integer pageNum, Integer pageSize, Integer userid);
 }

@@ -1486,6 +1486,26 @@ Was expecting one of:
 2022-07-08 11:54:49.296  INFO 25728 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
 2022-07-08 11:54:49.379  INFO 25728 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2022-07-08 11:54:49.520  INFO 25728 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 13:14:57.927  INFO 8782 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on luolihuis-MacBook-Pro.local with PID 8782 (/Users/lolisky/Documents/WaiWaiBackend2/target/classes started by lolisky in /Users/lolisky/Documents/WaiWaiBackend2)
+2022-07-08 13:14:57.928  INFO 8782 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 13:14:58.217  INFO 8782 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-08 13:14:58.218  INFO 8782 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-08 13:14:58.227  INFO 8782 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3ms. Found 0 Redis repository interfaces.
+2022-07-08 13:14:58.423  INFO 8782 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 13:14:58.428  INFO 8782 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 13:14:58.428  INFO 8782 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 13:14:58.457  INFO 8782 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 13:14:58.457  INFO 8782 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 512 ms
+2022-07-08 13:14:58.620  WARN 8782 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 13:14:58.620  WARN 8782 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 13:14:58.878  INFO 8782 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 13:14:58.915  INFO 8782 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:14:59.011  INFO 8782 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 13:14:59.012  INFO 8782 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 13:14:59.013  INFO 8782 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 13:14:59.023  INFO 8782 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 13:14:59.120  INFO 8782 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 1.339 seconds (JVM running for 1.767)
+2022-07-08 18:56:30.505  INFO 8782 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
 2022-07-08 12:41:57.730  INFO 28008 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 28008 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
 2022-07-08 12:41:57.734  INFO 28008 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
 2022-07-08 12:41:58.524  INFO 28008 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!

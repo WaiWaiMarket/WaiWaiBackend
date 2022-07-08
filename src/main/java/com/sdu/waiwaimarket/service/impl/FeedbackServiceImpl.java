@@ -2,9 +2,12 @@ package com.sdu.waiwaimarket.service.impl;
 
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.sdu.waiwaimarket.mapper.FeedbackMapper;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.FeedbackService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,6 +62,20 @@ public class FeedbackServiceImpl implements FeedbackService {
         FeedbackVO feedbackVO = new FeedbackVO();
         BeanUtils.copyProperties(feedbackDAO,feedbackVO);
         return feedbackVO;
+    }
+
+    @Override
+    public IPage<FeedbackDAO> feedbackSelectAll(Integer pageNum, Integer pageSize, Integer userid) {
+        Page<FeedbackDAO> page = new Page(pageNum, pageSize);
+        if(userid == null){
+            IPage<FeedbackDAO> feedbackDAOPage = feedbackMapper.selectPage(page, null);
+            return feedbackDAOPage;
+        }
+        /*else {
+            IPage<WantDAO> wantDAOIPage = wantMapper.selectByPage(page, userId);
+            return  wantDAOIPage;
+        }*/
+        return null;
     }
 
 
