@@ -10,6 +10,7 @@ import com.sdu.waiwaimarket.mapper.GoodMapper;
 import com.sdu.waiwaimarket.mapper.UserMapper;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
@@ -31,9 +32,11 @@ public class GoodServiceImpl implements GoodService {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
+
     //添加商品
     @Override
     public Integer goodInsert(GoodInsertDTO goodInsertDTO) {
+
         GoodDAO goodDAO = new GoodDAO();
         BeanUtils.copyProperties(goodInsertDTO, goodDAO);
         goodDAO.setGoodsstatus(0);          //商品状态默认0正常
@@ -144,6 +147,7 @@ public class GoodServiceImpl implements GoodService {
             UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(goodDAO.getGoodsid());
             BeanUtils.copyProperties(goodDAO, goodVO);
             goodVO.setCategoryname(categoryDAO.getCategoryname());
             goodVO.setCategoryid(categoryDAO.getCategoryid());
@@ -177,6 +181,7 @@ public class GoodServiceImpl implements GoodService {
 
             //设置GoodVO
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(id);
             BeanUtils.copyProperties(goodDAO, goodVO);
             if(categoryDAO != null)
                 goodVO.setCategoryname(categoryDAO.getCategoryname());
@@ -231,6 +236,7 @@ public class GoodServiceImpl implements GoodService {
             UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(goodDAO.getGoodsid());
             BeanUtils.copyProperties(goodDAO, goodVO);
             if(categoryDAO != null)
                 goodVO.setCategoryname(categoryDAO.getCategoryname());
@@ -271,6 +277,7 @@ public class GoodServiceImpl implements GoodService {
             UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(goodDAO.getGoodsid());
             BeanUtils.copyProperties(goodDAO, goodVO);
             if(categoryDAO != null)
                 goodVO.setCategoryname(categoryDAO.getCategoryname());
@@ -302,6 +309,7 @@ public class GoodServiceImpl implements GoodService {
             UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(goodDAO.getGoodsid());
             BeanUtils.copyProperties(goodDAO, goodVO);
             goodVO.setCategoryname(categoryDAO.getCategoryname());
             goodVO.setCategoryid(categoryDAO.getCategoryid());
@@ -340,6 +348,7 @@ public class GoodServiceImpl implements GoodService {
             UserDAO userDAO = userMapper.selectOne(queryWrapper3);
 
             GoodVO goodVO = new GoodVO();
+            goodVO.setGoosid(goodDAO.getGoodsid());
             BeanUtils.copyProperties(goodDAO, goodVO);
             if(categoryDAO != null)
                 goodVO.setCategoryname(categoryDAO.getCategoryname());

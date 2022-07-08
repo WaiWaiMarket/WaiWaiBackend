@@ -10,6 +10,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface UserMapper extends BaseMapper<UserDAO> {
 
+
     @Select("select * from user")
     public IPage<UserDAO> userSelectByPage(IPage<UserDAO> userDAOIPage);
 

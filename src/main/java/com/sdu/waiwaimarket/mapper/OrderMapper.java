@@ -17,8 +17,9 @@ public interface OrderMapper extends BaseMapper<OrderDAO> {
             "o1.sellid=u2.userid and o1.goodsid=g1.goodsid and o1.buyid='${userId}'")
     public IPage<OrderVO> orderSelectByUserIdPage(IPage<OrderVO> userPage, @Param("userId")Integer userId);
 
-    @Select("")
-    public IPage<OrderVO> orderSelectAll(IPage<OrderVO> userPage);
+
+
+
 
     @Select("select o1.orderid,o1.buyid,o1.sellid,o1.goodsid,o1.orderstatus,o1.orderdate,u1.username,u2.username," +
             "g1.goodsname,g1.goodsprice from orderinfo o1,user u1, user u2,goods g1 where o1.buyid=u1.userid and " +

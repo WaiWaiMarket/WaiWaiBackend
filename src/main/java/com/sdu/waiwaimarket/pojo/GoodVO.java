@@ -1,6 +1,7 @@
 package com.sdu.waiwaimarket.pojo;
 
 public class GoodVO {
+    Integer goosid;
     String goodsname;           //商品名字
     Integer userid;             //卖家id
     String username;             //卖家姓名
@@ -11,6 +12,14 @@ public class GoodVO {
     Integer categoryid;         //商品类别id
     String categoryname;         //商品类型
     Integer goodsstatus;        //商品状态
+
+    public Integer getGoosid() {
+        return goosid;
+    }
+
+    public void setGoosid(Integer goosid) {
+        this.goosid = goosid;
+    }
 
     public String getGoodsname() {
         return goodsname;
