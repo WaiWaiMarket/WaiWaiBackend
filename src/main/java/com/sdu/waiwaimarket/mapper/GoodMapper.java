@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sdu.waiwaimarket.pojo.GoodDAO;
 import com.sdu.waiwaimarket.pojo.GoodVO;
+import com.sdu.waiwaimarket.pojo.OrderDAO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -36,4 +37,8 @@ public interface GoodMapper extends BaseMapper<GoodDAO> {
             " and goods.categoryid=category.categoryid and goods.goodsstatus!=1 and " +
             "goods.goodsname like '%${name}%' ")
     public IPage<GoodVO> selectByPage2(IPage<GoodVO> userPage ,@Param("name")String name);
+
+    @Select("select * from goods where userid = #{userid}")
+    public IPage<GoodDAO> UserGoodsSelect(IPage<GoodDAO> goodDAOIPage,@Param("userid")Integer userid);
+
 }

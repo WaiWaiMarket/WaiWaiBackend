@@ -79,15 +79,15 @@ public class UserController {
     }
     //查看某用户的商品信息(卖家查自己上架的商品)
     @RequestMapping("/user/UserGoodsSelect")
-    public ServerResult UserGoodsSelect(UserGoodsSelectDTO userGoodsSelectDTO){
-        UserGoodsSelectVO userGoodsSelectVO = userService.UserGoodsSelect(userGoodsSelectDTO);
-        return new ServerResult(0,"查找商品信息成功",userGoodsSelectVO);
+    public ServerResult UserGoodsSelect(Integer pageNum, Integer pageSize,Integer userid){
+        IPage<GoodDAO> goodDAOIPage = userService.UserGoodsSelect(pageNum,pageSize,userid);
+        return new ServerResult(0,"查找商品信息成功",goodDAOIPage);
     }
     //查看某用户的订单信息
     @RequestMapping("/user/UserOrderSelect")
-    public ServerResult UserOrderSelect(UserOrderSelectDTO userOrderSelectDTO){
-        UserOrderSelectVO userOrderSelectVO = userService.UserOrderSelect(userOrderSelectDTO);
-        return new ServerResult(0,"查看用户订单信息成功",userOrderSelectVO);
+    public ServerResult UserOrderSelect(Integer pageNum, Integer pageSize,Integer userid){
+        IPage<OrderDAO> orderDAOIPage = userService.UserOrderSelect(pageNum,pageSize,userid);
+        return new ServerResult(0,"查看用户订单信息成功",orderDAOIPage);
     }
 
 }
