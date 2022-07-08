@@ -7,7 +7,7 @@ public class WantVO {
     Integer userid;
     String username;
     Integer goodsprice;
-    Integer goodsdesc;
+    String goodsdesc;
     String goodslevel;
     Date goodsdate;
     Integer goodsstatus;
@@ -32,6 +32,9 @@ public class WantVO {
         return username;
     }
 
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
     public Integer getGoodsprice() {
         return goodsprice;
@@ -41,11 +44,11 @@ public class WantVO {
         this.goodsprice = goodsprice;
     }
 
-    public Integer getGoodsdesc() {
+    public String getGoodsdesc() {
         return goodsdesc;
     }
 
-    public void setGoodsdesc(Integer goodsdesc) {
+    public void setGoodsdesc(String goodsdesc) {
         this.goodsdesc = goodsdesc;
     }
 
