@@ -12,7 +12,7 @@ import org.apache.ibatis.annotations.Select;
 @Mapper
 public interface WantMapper extends BaseMapper<WantDAO> {
     @Select("select want.wantid, goods.goodsid, goods.goodsname, goods.userid, goods.goodsprice, goods.goodsdesc," +
-            " goods.goodslevel, goods.goodsdate, goods.goodsstatus FROM goods, want WHERE goods.userid=want.userid " +
-            "and goods.goodsid=want.goodsid and want.userid='${userId}' ")
+            " goods.goodslevel, goods.goodsdate, goods.goodsstatus FROM goods, want WHERE goods.goodsid=want.goodsid " +
+            "and want.userid='${userId}' ")
     public IPage<WantVO> wantSelectAll(Page<WantVO> page,  @Param("userId")Integer userId);
 }
