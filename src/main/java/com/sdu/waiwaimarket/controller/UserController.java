@@ -1,5 +1,6 @@
 package com.sdu.waiwaimarket.controller;
 
+import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +14,29 @@ public class UserController {
     @Autowired
     UserService userService;
 
+    //修改用户密码
+    @RequestMapping("/user/UserpwdUpdate")
+    public ServerResult UserpwdUpdate(UserpwdUpdateDTO userpwdUpdateDTO){
+        boolean isSuccess = userService.UserpwdUpdate(userpwdUpdateDTO);
+        if(isSuccess)
+            return new ServerResult(0,"修改成功",null);
+        return new ServerResult(500,"修改失败",null);
+    }
+
+    //查询所有用户
+    @RequestMapping("/user/UserSelectByPage")
+    public ServerResult userSelectByPage(Integer pageNum, Integer pageSize){
+        IPage<UserDAO> userDAOIPage = userService.UserSelectAll(pageNum,pageSize);
+        return new ServerResult(0,"返回分页内容成功",userDAOIPage);
+    }
+
     //用户根据订单生成反馈
     @RequestMapping("/user/UserCreateBack")
     public ServerResult UserCreateBack(UserCreateBackDTO userCreateBackDTO){
         boolean isSuccess = userService.UserCreateBack(userCreateBackDTO);
         if(isSuccess)
             return new ServerResult(0,"生成成功",null);
-        return new ServerResult(0,"生成失败",null);
+        return new ServerResult(500,"生成失败",null);
     }
 
     //用户注册
@@ -62,15 +79,15 @@ public class UserController {
     }
     //查看某用户的商品信息(卖家查自己上架的商品)
     @RequestMapping("/user/UserGoodsSelect")
-    public ServerResult UserGoodsSelect(UserGoodsSelectDTO userGoodsSelectDTO){
-        UserGoodsSelectVO userGoodsSelectVO = userService.UserGoodsSelect(userGoodsSelectDTO);
-        return new ServerResult(0,"查找商品信息成功",userGoodsSelectVO);
+    public ServerResult UserGoodsSelect(Integer pageNum, Integer pageSize,Integer userid){
+        IPage<GoodDAO> goodDAOIPage = userService.UserGoodsSelect(pageNum,pageSize,userid);
+        return new ServerResult(0,"查找商品信息成功",goodDAOIPage);
     }
     //查看某用户的订单信息
     @RequestMapping("/user/UserOrderSelect")
-    public ServerResult UserOrderSelect(UserOrderSelectDTO userOrderSelectDTO){
-        UserOrderSelectVO userOrderSelectVO = userService.UserOrderSelect(userOrderSelectDTO);
-        return new ServerResult(0,"查看用户订单信息成功",userOrderSelectVO);
+    public ServerResult UserOrderSelect(Integer pageNum, Integer pageSize,Integer userid){
+        IPage<OrderDAO> orderDAOIPage = userService.UserOrderSelect(pageNum,pageSize,userid);
+        return new ServerResult(0,"查看用户订单信息成功",orderDAOIPage);
     }
 
 }

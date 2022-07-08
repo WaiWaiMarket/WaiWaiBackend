@@ -1,9 +1,12 @@
 package com.sdu.waiwaimarket.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 
 @TableName("category")
 public class CategoryDAO {
+    @TableId(type = IdType.AUTO)
     Integer categoryid;         //商品类别
     String categoryname;        //类别名称
 
