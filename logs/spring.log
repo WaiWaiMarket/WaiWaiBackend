@@ -834,655 +834,351 @@
 2022-07-07 23:57:07.385  INFO 29248 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.232 seconds (JVM running for 4.172)
 2022-07-07 23:57:07.440  INFO 29248 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2022-07-07 23:57:07.581  INFO 29248 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 10:39:49.143  INFO 19244 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 19244 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 10:39:49.147  INFO 19244 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 10:39:50.111  INFO 19244 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 10:39:50.118  INFO 19244 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 10:39:50.119  INFO 19244 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 10:39:50.206  INFO 19244 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 10:39:50.206  INFO 19244 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1016 ms
-2022-07-08 10:39:51.213  WARN 19244 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 10:39:51.213  WARN 19244 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 10:39:51.558  INFO 19244 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 10:39:51.671  INFO 19244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 10:39:51.809  WARN 19244 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'; nested exception is org.springframework.boot.web.server.PortInUseException: Port 9002 is already in use
-2022-07-08 10:39:51.810  INFO 19244 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-08 10:39:51.814  INFO 19244 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-08 10:39:51.823  INFO 19244 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-08 10:39:51.829 ERROR 19244 --- [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Web server failed to start. Port 9002 was already in use.
-
-Action:
-
-Identify and stop the process that's listening on port 9002 or configure this application to listen on another port.
-
-2022-07-08 10:41:01.156  INFO 45852 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 45852 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 10:41:01.160  INFO 45852 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 10:41:02.053  INFO 45852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 10:41:02.061  INFO 45852 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 10:41:02.061  INFO 45852 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 10:41:02.123  INFO 45852 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 10:41:02.123  INFO 45852 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 920 ms
-2022-07-08 10:41:03.111  WARN 45852 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 10:41:03.112  WARN 45852 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 10:41:03.421  INFO 45852 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 10:41:03.544  INFO 45852 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 10:41:03.703  INFO 45852 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 10:41:03.704  INFO 45852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 10:41:03.708  INFO 45852 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 10:41:03.740  INFO 45852 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 10:41:03.993  INFO 45852 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.232 seconds (JVM running for 4.165)
-2022-07-08 10:41:08.448  INFO 45852 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 10:41:08.448  INFO 45852 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 10:41:08.453  INFO 45852 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-07-08 10:41:24.968  INFO 45852 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 10:41:25.131  INFO 45852 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 10:42:37.955  INFO 41880 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 41880 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 10:42:37.959  INFO 41880 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 10:42:38.902  INFO 41880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 10:42:38.909  INFO 41880 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 10:42:38.909  INFO 41880 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 10:42:38.972  INFO 41880 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 10:42:38.972  INFO 41880 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 972 ms
-2022-07-08 10:42:39.922  WARN 41880 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 10:42:39.922  WARN 41880 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 10:42:40.247  INFO 41880 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 10:42:40.366  INFO 41880 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 10:42:40.502  INFO 41880 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 10:42:40.503  INFO 41880 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 10:42:40.505  INFO 41880 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 10:42:40.529  INFO 41880 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 10:42:40.722  INFO 41880 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.076 seconds (JVM running for 3.872)
-2022-07-08 10:42:43.017  INFO 41880 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 10:42:43.017  INFO 41880 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 10:42:43.022  INFO 41880 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-07-08 10:42:43.099  INFO 41880 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 10:42:43.246  INFO 41880 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 10:43:40.307  INFO 38048 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 38048 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 10:43:40.310  INFO 38048 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 10:43:41.408  INFO 38048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 10:43:41.417  INFO 38048 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 10:43:41.417  INFO 38048 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 10:43:41.502  INFO 38048 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 10:43:41.502  INFO 38048 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1147 ms
-2022-07-08 10:43:42.510  WARN 38048 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 10:43:42.511  WARN 38048 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 10:43:42.843  INFO 38048 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 10:43:42.967  INFO 38048 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 10:43:43.102  INFO 38048 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 10:43:43.103  INFO 38048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 10:43:43.106  INFO 38048 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 10:43:43.131  INFO 38048 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 10:43:43.337  INFO 38048 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.538 seconds (JVM running for 4.475)
-2022-07-08 10:43:46.536  INFO 38048 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 10:43:46.536  INFO 38048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 10:43:46.542  INFO 38048 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-07-08 10:43:46.625  INFO 38048 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 10:43:46.785  INFO 38048 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 10:59:30.050  INFO 12420 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 12420 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 10:59:30.054  INFO 12420 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 10:59:30.739  INFO 12420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 10:59:30.741  INFO 12420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 10:59:30.762  INFO 12420 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
-2022-07-08 10:59:31.155  INFO 12420 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 10:59:31.163  INFO 12420 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 10:59:31.163  INFO 12420 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 10:59:31.232  INFO 12420 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 10:59:31.233  INFO 12420 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1128 ms
-2022-07-08 10:59:32.185  WARN 12420 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 10:59:32.186  WARN 12420 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 10:59:32.478  WARN 12420 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
-2022-07-08 10:59:32.490  INFO 12420 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2022-07-08 10:59:32.497  INFO 12420 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2022-07-08 10:59:32.508 ERROR 12420 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'imgController': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:405) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1420) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:593) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:516) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:324) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:897) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:879) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:551) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:758) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:750) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:405) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1237) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.3.7.RELEASE.jar:2.3.7.RELEASE]
-	at com.sdu.waiwaimarket.WaiwaimarketApplication.main(WaiwaimarketApplication.java:10) [classes/:na]
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'SavePath.ProfilePhoto' in value "${SavePath.ProfilePhoto}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:178) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:239) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:210) ~[spring-core-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175) ~[spring-context-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:918) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1248) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1227) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399) ~[spring-beans-5.2.12.RELEASE.jar:5.2.12.RELEASE]
-	... 18 common frames omitted
-
-2022-07-08 11:01:45.288  INFO 43532 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 43532 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:01:45.290  INFO 43532 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:01:45.954  INFO 43532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:01:45.956  INFO 43532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:01:45.978  INFO 43532 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:01:46.375  INFO 43532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:01:46.382  INFO 43532 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:01:46.383  INFO 43532 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:01:46.454  INFO 43532 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:01:46.454  INFO 43532 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1130 ms
-2022-07-08 11:01:47.354  WARN 43532 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:01:47.354  WARN 43532 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:01:47.917  INFO 43532 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:01:47.996  INFO 43532 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:01:48.207  INFO 43532 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:01:48.208  INFO 43532 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:01:48.211  INFO 43532 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:01:48.241  INFO 43532 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:01:48.257  INFO 43532 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:01:48.257  INFO 43532 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:01:48.265  INFO 43532 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
-2022-07-08 11:01:48.480  INFO 43532 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.562 seconds (JVM running for 4.438)
-2022-07-08 11:04:04.071  INFO 9832 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 9832 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:04:04.073  INFO 9832 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:04:04.815  INFO 9832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:04:04.817  INFO 9832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:04:04.838  INFO 9832 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:04:05.231  INFO 9832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:04:05.240  INFO 9832 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:04:05.240  INFO 9832 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:04:05.312  INFO 9832 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:04:05.312  INFO 9832 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1200 ms
-2022-07-08 11:04:06.205  WARN 9832 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:04:06.205  WARN 9832 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:04:06.811  INFO 9832 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:04:06.886  INFO 9832 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:04:07.106  INFO 9832 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:04:07.107  INFO 9832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:04:07.111  INFO 9832 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:04:07.142  INFO 9832 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:04:07.371  INFO 9832 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.615 seconds (JVM running for 4.381)
-2022-07-08 11:04:08.372  INFO 9832 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:04:08.372  INFO 9832 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:04:08.377  INFO 9832 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-07-08 11:04:36.071  INFO 9832 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:04:36.248  INFO 9832 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:07:29.904  INFO 47492 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 47492 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:07:29.907  INFO 47492 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:07:30.640  INFO 47492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:07:30.642  INFO 47492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:07:30.671  INFO 47492 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:07:31.152  INFO 47492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:07:31.164  INFO 47492 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:07:31.165  INFO 47492 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:07:31.257  INFO 47492 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:07:31.258  INFO 47492 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1311 ms
-2022-07-08 11:07:32.303  WARN 47492 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:07:32.303  WARN 47492 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:07:32.988  INFO 47492 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:07:33.094  INFO 47492 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:07:33.365  INFO 47492 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:07:33.367  INFO 47492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:07:33.371  INFO 47492 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:07:33.404  INFO 47492 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:07:33.650  INFO 47492 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 4.233 seconds (JVM running for 5.515)
-2022-07-08 11:07:34.074  INFO 47492 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:07:34.074  INFO 47492 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:07:34.081  INFO 47492 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:07:45.683  INFO 47492 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:07:45.868  INFO 47492 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:07:59.252  INFO 47492 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:07:59.276  INFO 47492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2022-07-08 11:07:59.286  INFO 47492 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2022-07-08 11:09:17.964  INFO 11180 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 11180 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:09:17.966  INFO 11180 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:09:18.716  INFO 11180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:09:18.717  INFO 11180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:09:18.744  INFO 11180 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
-2022-07-08 11:09:19.202  INFO 11180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:09:19.213  INFO 11180 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:09:19.213  INFO 11180 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:09:19.289  INFO 11180 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:09:19.290  INFO 11180 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
-2022-07-08 11:09:20.220  WARN 11180 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:09:20.220  WARN 11180 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:09:20.750  INFO 11180 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:09:20.818  INFO 11180 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:09:21.005  INFO 11180 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:09:21.006  INFO 11180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:09:21.009  INFO 11180 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:09:21.034  INFO 11180 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:09:21.235  INFO 11180 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.689 seconds (JVM running for 4.639)
-2022-07-08 11:09:22.731  INFO 11180 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:09:22.732  INFO 11180 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:09:22.738  INFO 11180 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:09:22.805  INFO 11180 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:09:22.973  INFO 11180 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:10:29.201  INFO 35080 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 35080 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:10:29.204  INFO 35080 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:10:29.996  INFO 35080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:10:29.998  INFO 35080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:10:30.022  INFO 35080 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:10:30.463  INFO 35080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:10:30.470  INFO 35080 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:10:30.470  INFO 35080 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:10:30.540  INFO 35080 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:10:30.541  INFO 35080 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1297 ms
-2022-07-08 11:10:31.532  WARN 35080 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:10:31.532  WARN 35080 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:10:32.133  INFO 35080 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:10:32.212  INFO 35080 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:10:32.442  INFO 35080 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:10:32.443  INFO 35080 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:10:32.446  INFO 35080 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:10:32.472  INFO 35080 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:10:32.681  INFO 35080 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.821 seconds (JVM running for 4.689)
-2022-07-08 11:12:12.210  INFO 35080 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:12:12.210  INFO 35080 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:12:12.216  INFO 35080 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:12:12.304  INFO 35080 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:12:12.453  INFO 35080 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:20:40.721  INFO 14812 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 14812 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:20:40.724  INFO 14812 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:20:41.649  INFO 14812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:20:41.651  INFO 14812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:20:41.673  INFO 14812 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:20:42.192  INFO 14812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:20:42.204  INFO 14812 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:20:42.204  INFO 14812 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:20:42.296  INFO 14812 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:20:42.297  INFO 14812 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1518 ms
-2022-07-08 11:20:43.247  WARN 14812 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:20:43.247  WARN 14812 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:20:43.796  INFO 14812 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:20:43.864  INFO 14812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:20:44.066  INFO 14812 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:20:44.067  INFO 14812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:20:44.070  INFO 14812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:20:44.097  INFO 14812 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:20:44.296  INFO 14812 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.891 seconds (JVM running for 4.615)
-2022-07-08 11:20:50.728  INFO 14812 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:20:50.729  INFO 14812 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:20:50.735  INFO 14812 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:22:08.201  INFO 14812 --- [http-nio-9002-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:22:08.448  INFO 14812 --- [http-nio-9002-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:24:58.254  INFO 17236 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 17236 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:24:58.257  INFO 17236 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:24:58.951  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:24:58.953  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:24:58.973  INFO 17236 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:24:59.398  INFO 17236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:24:59.405  INFO 17236 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:24:59.405  INFO 17236 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:24:59.475  INFO 17236 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:24:59.475  INFO 17236 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1176 ms
-2022-07-08 11:25:00.520  WARN 17236 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:25:00.520  WARN 17236 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:25:01.067  INFO 17236 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:25:01.141  INFO 17236 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:25:01.349  INFO 17236 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:25:01.350  INFO 17236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:25:01.352  INFO 17236 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:25:01.376  INFO 17236 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:25:01.579  INFO 17236 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.652 seconds (JVM running for 4.555)
-2022-07-08 11:25:03.414  INFO 17236 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:25:03.414  INFO 17236 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:25:03.420  INFO 17236 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:26:58.504  INFO 17236 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:26:58.662  INFO 17236 --- [http-nio-9002-exec-9] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:28:00.486  INFO 44556 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 44556 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:28:00.490  INFO 44556 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:28:01.318  INFO 44556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:28:01.319  INFO 44556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:28:01.344  INFO 44556 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 10ms. Found 0 Redis repository interfaces.
-2022-07-08 11:28:01.752  INFO 44556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:28:01.762  INFO 44556 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:28:01.762  INFO 44556 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:28:01.833  INFO 44556 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:28:01.833  INFO 44556 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1286 ms
-2022-07-08 11:28:02.775  WARN 44556 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:28:02.775  WARN 44556 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:28:03.329  INFO 44556 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:28:03.400  INFO 44556 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:28:03.608  INFO 44556 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:28:03.610  INFO 44556 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:28:03.613  INFO 44556 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:28:03.641  INFO 44556 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:28:03.879  INFO 44556 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.851 seconds (JVM running for 4.851)
-2022-07-08 11:28:06.241  INFO 44556 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:28:06.241  INFO 44556 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:28:06.247  INFO 44556 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:28:31.340  INFO 44556 --- [http-nio-9002-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:28:31.557  INFO 44556 --- [http-nio-9002-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:50:55.238  INFO 23692 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 23692 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:50:55.241  INFO 23692 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:50:55.984  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:50:55.985  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:50:56.005  INFO 23692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 8ms. Found 0 Redis repository interfaces.
-2022-07-08 11:50:56.369  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:50:56.376  INFO 23692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:50:56.376  INFO 23692 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:50:56.449  INFO 23692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:50:56.449  INFO 23692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1154 ms
-2022-07-08 11:50:57.386  WARN 23692 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:50:57.386  WARN 23692 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:50:57.936  INFO 23692 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:50:58.008  INFO 23692 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:50:58.201  INFO 23692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:50:58.202  INFO 23692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:50:58.205  INFO 23692 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:50:58.230  INFO 23692 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:50:58.276  INFO 23692 --- [http-nio-9002-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:50:58.276  INFO 23692 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:50:58.281  INFO 23692 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2022-07-08 11:50:58.443  INFO 23692 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.576 seconds (JVM running for 4.443)
-2022-07-08 11:51:16.106  WARN 23692 --- [http-nio-9002-exec-5] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%华%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:51:16.113  INFO 23692 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:51:16.254  INFO 23692 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2022-07-08 11:51:29.837  WARN 23692 --- [http-nio-9002-exec-8] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%华%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:32.807  WARN 23692 --- [http-nio-9002-exec-4] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%华%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:36.151  WARN 23692 --- [http-nio-9002-exec-5] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:36.886  WARN 23692 --- [http-nio-9002-exec-7] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:37.358  WARN 23692 --- [http-nio-9002-exec-6] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:41.881  WARN 23692 --- [http-nio-9002-exec-8] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:42.618  WARN 23692 --- [http-nio-9002-exec-9] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:42.780  WARN 23692 --- [http-nio-9002-exec-10] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:53:42.940  WARN 23692 --- [http-nio-9002-exec-3] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:54:13.466  WARN 23692 --- [http-nio-9002-exec-1] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%华%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:54:14.620  WARN 23692 --- [http-nio-9002-exec-2] c.b.m.e.p.i.PaginationInnerInterceptor   : optimize this sql to a count sql has exception, sql:"select goods.goodsname, goods.userid, user.username, goods.goodsprice, goods.goodsdesc, goods.goodsimg, goods.goodslevel, category.categoryid, category.categoryname, goods.goodsstatus FROM goods, category, user WHERE goods.userid=user.userid and goods.categoryid=category.categoryid and and goods.goodsstatus!=1 and goods.goodsname like '%华%'", exception:
-net.sf.jsqlparser.parser.ParseException: Encountered unexpected token: "and" "AND"
-    at line 1, column 284.
-
-Was expecting one of:
-
-    "&"
-    "::"
-    ";"
-    "<<"
-    ">>"
-    "COLLATE"
-    "CONNECT"
-    "EMIT"
-    "GROUP"
-    "HAVING"
-    "START"
-    "["
-    "^"
-    "|"
-    <EOF>
-
-2022-07-08 11:54:33.067  INFO 25728 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 25728 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
-2022-07-08 11:54:33.071  INFO 25728 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
-2022-07-08 11:54:33.729  INFO 25728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
-2022-07-08 11:54:33.730  INFO 25728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-2022-07-08 11:54:33.750  INFO 25728 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9ms. Found 0 Redis repository interfaces.
-2022-07-08 11:54:34.136  INFO 25728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
-2022-07-08 11:54:34.142  INFO 25728 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2022-07-08 11:54:34.142  INFO 25728 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2022-07-08 11:54:34.208  INFO 25728 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2022-07-08 11:54:34.208  INFO 25728 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1096 ms
-2022-07-08 11:54:35.087  WARN 25728 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
-2022-07-08 11:54:35.087  WARN 25728 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
-2022-07-08 11:54:35.597  INFO 25728 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
-2022-07-08 11:54:35.668  INFO 25728 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2022-07-08 11:54:35.851  INFO 25728 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
-2022-07-08 11:54:35.852  INFO 25728 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
-2022-07-08 11:54:35.855  INFO 25728 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2022-07-08 11:54:35.879  INFO 25728 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2022-07-08 11:54:36.077  INFO 25728 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.33 seconds (JVM running for 4.171)
-2022-07-08 11:54:49.290  INFO 25728 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2022-07-08 11:54:49.290  INFO 25728 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2022-07-08 11:54:49.296  INFO 25728 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
-2022-07-08 11:54:49.379  INFO 25728 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2022-07-08 11:54:49.520  INFO 25728 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 09:39:15.404  INFO 17436 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 17436 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 09:39:15.406  INFO 17436 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 09:39:16.342  INFO 17436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 09:39:16.350  INFO 17436 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 09:39:16.350  INFO 17436 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 09:39:16.439  INFO 17436 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 09:39:16.439  INFO 17436 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 999 ms
+2022-07-08 09:39:16.836  WARN 17436 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 09:39:16.836  WARN 17436 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 09:39:17.091  INFO 17436 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 09:39:17.150  INFO 17436 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 09:39:17.274  INFO 17436 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 09:39:17.275  INFO 17436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 09:39:17.277  INFO 17436 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 09:39:17.300  INFO 17436 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 09:39:17.479  INFO 17436 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.362 seconds (JVM running for 3.059)
+2022-07-08 09:40:12.144  INFO 17436 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 09:40:12.145  INFO 17436 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 09:40:12.152  INFO 17436 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-07-08 09:55:24.985  INFO 17436 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 09:55:34.599  INFO 4580 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 4580 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 09:55:34.601  INFO 4580 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 09:55:35.564  INFO 4580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 09:55:35.572  INFO 4580 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 09:55:35.572  INFO 4580 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 09:55:35.660  INFO 4580 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 09:55:35.660  INFO 4580 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1017 ms
+2022-07-08 09:55:36.130  WARN 4580 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 09:55:36.130  WARN 4580 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 09:55:36.425  INFO 4580 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 09:55:36.483  INFO 4580 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 09:55:36.629  INFO 4580 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 09:55:36.630  INFO 4580 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 09:55:36.633  INFO 4580 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 09:55:36.668  INFO 4580 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 09:55:36.880  INFO 4580 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.641 seconds (JVM running for 3.408)
+2022-07-08 10:45:27.675  INFO 4580 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 10:45:27.677  INFO 4580 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 10:45:27.686  INFO 4580 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-08 10:45:27.761  INFO 4580 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 10:45:27.894  INFO 4580 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 11:35:39.010  INFO 4580 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 11:35:39.012  INFO 4580 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 11:35:39.016  INFO 4580 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 11:35:44.017  INFO 12816 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 12816 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 11:35:44.019  INFO 12816 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 11:35:44.929  INFO 12816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 11:35:44.935  INFO 12816 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 11:35:44.936  INFO 12816 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 11:35:45.018  INFO 12816 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 11:35:45.019  INFO 12816 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 973 ms
+2022-07-08 11:35:45.400  WARN 12816 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 11:35:45.400  WARN 12816 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 11:35:45.658  INFO 12816 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 11:35:45.709  INFO 12816 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 11:35:45.843  INFO 12816 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 11:35:45.843  INFO 12816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 11:35:45.846  INFO 12816 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 11:35:45.875  INFO 12816 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 11:35:46.080  INFO 12816 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.334 seconds (JVM running for 2.999)
+2022-07-08 13:06:06.670  INFO 12816 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 13:06:06.672  INFO 12816 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 13:06:06.675  INFO 12816 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2022-07-08 13:29:56.155  INFO 12816 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 13:29:56.276  INFO 12816 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 13:52:49.112  INFO 12816 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:52:49.114  INFO 12816 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 13:52:49.138  INFO 12816 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 13:52:59.616  INFO 28732 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 28732 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 13:52:59.619  INFO 28732 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 13:53:00.522  INFO 28732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 13:53:00.530  INFO 28732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 13:53:00.530  INFO 28732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 13:53:00.633  INFO 28732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 13:53:00.633  INFO 28732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 983 ms
+2022-07-08 13:53:01.042  WARN 28732 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 13:53:01.042  WARN 28732 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 13:53:01.315  INFO 28732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 13:53:01.374  INFO 28732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:53:01.524  INFO 28732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 13:53:01.525  INFO 28732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 13:53:01.529  INFO 28732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 13:53:01.560  INFO 28732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 13:53:01.744  INFO 28732 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.387 seconds (JVM running for 3.0)
+2022-07-08 13:53:07.214  INFO 28732 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 13:53:07.215  INFO 28732 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 13:53:07.220  INFO 28732 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-08 13:53:56.106  INFO 28732 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:55:20.758  INFO 28456 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 28456 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 13:55:20.760  INFO 28456 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 13:55:21.642  INFO 28456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 13:55:21.649  INFO 28456 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 13:55:21.649  INFO 28456 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 13:55:21.730  INFO 28456 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 13:55:21.730  INFO 28456 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2022-07-08 13:55:22.119  WARN 28456 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 13:55:22.120  WARN 28456 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 13:55:22.365  INFO 28456 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 13:55:22.423  INFO 28456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:55:22.571  INFO 28456 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 13:55:22.572  INFO 28456 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 13:55:22.575  INFO 28456 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 13:55:22.605  INFO 28456 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 13:55:22.826  INFO 28456 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.324 seconds (JVM running for 2.922)
+2022-07-08 13:55:26.711  INFO 28456 --- [http-nio-9002-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 13:55:26.711  INFO 28456 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 13:55:26.716  INFO 28456 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-08 13:55:39.043  INFO 28456 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 13:55:39.171  INFO 28456 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 13:56:27.447  INFO 28456 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:56:27.449  INFO 28456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 13:56:27.455  INFO 28456 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 13:56:32.374  INFO 19684 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 19684 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 13:56:32.377  INFO 19684 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 13:56:33.538  INFO 19684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 13:56:33.546  INFO 19684 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 13:56:33.546  INFO 19684 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 13:56:33.638  INFO 19684 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 13:56:33.638  INFO 19684 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1202 ms
+2022-07-08 13:56:34.171  WARN 19684 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 13:56:34.172  WARN 19684 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 13:56:34.752  INFO 19684 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 13:56:34.823  INFO 19684 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:56:34.984  INFO 19684 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 13:56:34.985  INFO 19684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 13:56:34.987  INFO 19684 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 13:56:35.013  INFO 19684 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 13:56:35.231  INFO 19684 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 3.147 seconds (JVM running for 3.779)
+2022-07-08 13:56:36.283  INFO 19684 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 13:56:36.283  INFO 19684 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 13:56:36.288  INFO 19684 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-08 13:56:45.368  INFO 19684 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 13:56:45.477  INFO 19684 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 13:59:12.220  INFO 19684 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:59:12.222  INFO 19684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 13:59:12.227  INFO 19684 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 13:59:17.492  INFO 27680 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 27680 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 13:59:17.494  INFO 27680 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 13:59:18.604  INFO 27680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 13:59:18.612  INFO 27680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 13:59:18.612  INFO 27680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 13:59:18.706  INFO 27680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 13:59:18.706  INFO 27680 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1179 ms
+2022-07-08 13:59:19.164  WARN 27680 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 13:59:19.164  WARN 27680 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 13:59:19.460  INFO 27680 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 13:59:19.523  INFO 27680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 13:59:19.674  INFO 27680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 13:59:19.675  INFO 27680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 13:59:19.678  INFO 27680 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 13:59:19.711  INFO 27680 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 13:59:19.945  INFO 27680 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.816 seconds (JVM running for 3.701)
+2022-07-08 13:59:23.422  INFO 27680 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 13:59:23.423  INFO 27680 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 13:59:23.428  INFO 27680 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-08 13:59:23.469  INFO 27680 --- [http-nio-9002-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 13:59:23.576  INFO 27680 --- [http-nio-9002-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 14:13:55.967  INFO 27680 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 14:13:55.969  INFO 27680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 14:13:55.974  INFO 27680 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 15:39:30.728  INFO 21912 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 21912 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 15:39:30.730  INFO 21912 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 15:39:31.658  INFO 21912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 15:39:31.664  INFO 21912 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 15:39:31.664  INFO 21912 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 15:39:31.744  INFO 21912 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 15:39:31.744  INFO 21912 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 989 ms
+2022-07-08 15:39:32.103  WARN 21912 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 15:39:32.103  WARN 21912 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 15:39:32.348  INFO 21912 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 15:39:32.397  INFO 21912 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 15:39:32.523  INFO 21912 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 15:39:32.523  INFO 21912 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 15:39:32.525  INFO 21912 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 15:39:32.549  INFO 21912 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 15:39:32.753  INFO 21912 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.272 seconds (JVM running for 2.945)
+2022-07-08 15:43:34.395  INFO 21912 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 15:43:34.396  INFO 21912 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 15:43:34.402  INFO 21912 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-08 15:43:48.312  INFO 21912 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 15:43:48.409  INFO 21912 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 16:11:43.117  INFO 21912 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:11:43.119  INFO 21912 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 16:11:43.126  INFO 21912 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 16:11:47.935  INFO 27732 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 27732 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 16:11:47.937  INFO 27732 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 16:11:48.814  INFO 27732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 16:11:48.821  INFO 27732 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 16:11:48.822  INFO 27732 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 16:11:48.911  INFO 27732 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 16:11:48.912  INFO 27732 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 943 ms
+2022-07-08 16:11:49.287  WARN 27732 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 16:11:49.288  WARN 27732 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 16:11:49.538  INFO 27732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 16:11:49.588  INFO 27732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:11:49.721  INFO 27732 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 16:11:49.722  INFO 27732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 16:11:49.724  INFO 27732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 16:11:49.749  INFO 27732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 16:11:49.938  INFO 27732 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.283 seconds (JVM running for 2.955)
+2022-07-08 16:11:55.527  INFO 27732 --- [http-nio-9002-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 16:11:55.528  INFO 27732 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 16:11:55.533  INFO 27732 --- [http-nio-9002-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-08 16:14:36.343  INFO 27732 --- [http-nio-9002-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 16:14:36.449  INFO 27732 --- [http-nio-9002-exec-8] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 16:20:47.986  INFO 27732 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:20:47.988  INFO 27732 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 16:20:47.995  INFO 27732 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 16:20:52.811  INFO 21940 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 21940 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 16:20:52.812  INFO 21940 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 16:20:53.647  INFO 21940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 16:20:53.653  INFO 21940 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 16:20:53.653  INFO 21940 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 16:20:53.739  INFO 21940 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 16:20:53.740  INFO 21940 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 901 ms
+2022-07-08 16:20:54.109  WARN 21940 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 16:20:54.109  WARN 21940 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 16:20:54.382  INFO 21940 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 16:20:54.435  INFO 21940 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:20:54.582  INFO 21940 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 16:20:54.583  INFO 21940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 16:20:54.585  INFO 21940 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 16:20:54.618  INFO 21940 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 16:20:54.849  INFO 21940 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.283 seconds (JVM running for 2.943)
+2022-07-08 16:21:00.190  INFO 21940 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 16:21:00.191  INFO 21940 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 16:21:00.196  INFO 21940 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-08 16:21:18.755  INFO 21940 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 16:21:18.857  INFO 21940 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 16:47:38.397  INFO 21940 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:47:38.398  INFO 21940 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 16:47:38.405  INFO 21940 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 16:47:42.579  INFO 25612 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 25612 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 16:47:42.581  INFO 25612 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 16:47:43.431  INFO 25612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 16:47:43.437  INFO 25612 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 16:47:43.438  INFO 25612 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 16:47:43.523  INFO 25612 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 16:47:43.524  INFO 25612 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 917 ms
+2022-07-08 16:47:43.882  WARN 25612 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 16:47:43.882  WARN 25612 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 16:47:44.145  INFO 25612 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 16:47:44.198  INFO 25612 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 16:47:44.318  INFO 25612 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 16:47:44.318  INFO 25612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 16:47:44.321  INFO 25612 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 16:47:44.344  INFO 25612 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 16:47:44.546  INFO 25612 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.224 seconds (JVM running for 2.858)
+2022-07-08 16:47:48.974  INFO 25612 --- [http-nio-9002-exec-4] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 16:47:48.975  INFO 25612 --- [http-nio-9002-exec-4] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 16:47:48.979  INFO 25612 --- [http-nio-9002-exec-4] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2022-07-08 16:48:12.208  INFO 25612 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 16:48:12.304  INFO 25612 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 17:01:04.891  INFO 25612 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:01:04.893  INFO 25612 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 17:01:04.900  INFO 25612 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 17:01:09.509  INFO 22324 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 22324 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 17:01:09.511  INFO 22324 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 17:01:10.365  INFO 22324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 17:01:10.371  INFO 22324 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 17:01:10.372  INFO 22324 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 17:01:10.454  INFO 22324 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 17:01:10.454  INFO 22324 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 910 ms
+2022-07-08 17:01:10.833  WARN 22324 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 17:01:10.834  WARN 22324 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 17:01:11.108  INFO 22324 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 17:01:11.159  INFO 22324 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:01:11.278  INFO 22324 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 17:01:11.278  INFO 22324 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 17:01:11.280  INFO 22324 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 17:01:11.307  INFO 22324 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 17:01:11.509  INFO 22324 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.262 seconds (JVM running for 2.886)
+2022-07-08 17:01:16.600  INFO 22324 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 17:01:16.601  INFO 22324 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 17:01:16.609  INFO 22324 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-08 17:03:39.092  INFO 22324 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:03:55.715  INFO 22468 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 22468 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 17:03:55.716  INFO 22468 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 17:03:56.693  INFO 22468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 17:03:56.699  INFO 22468 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 17:03:56.699  INFO 22468 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 17:03:56.783  INFO 22468 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 17:03:56.783  INFO 22468 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1040 ms
+2022-07-08 17:03:57.163  WARN 22468 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 17:03:57.163  WARN 22468 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 17:03:57.585  INFO 22468 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 17:03:57.704  INFO 22468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:03:57.967  INFO 22468 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 17:03:57.969  INFO 22468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 17:03:57.972  INFO 22468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 17:03:58.008  INFO 22468 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 17:03:58.315  INFO 22468 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.872 seconds (JVM running for 3.528)
+2022-07-08 17:03:59.541  INFO 22468 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 17:03:59.542  INFO 22468 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 17:03:59.548  INFO 22468 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-08 17:04:21.281  INFO 22468 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 17:04:21.380  INFO 22468 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 17:08:02.012  INFO 22468 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:08:02.013  INFO 22468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 17:08:02.018  INFO 22468 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 17:08:05.879  INFO 14544 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 14544 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 17:08:05.880  INFO 14544 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 17:08:07.128  INFO 14544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 17:08:07.136  INFO 14544 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 17:08:07.136  INFO 14544 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 17:08:07.256  INFO 14544 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 17:08:07.256  INFO 14544 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1346 ms
+2022-07-08 17:08:07.756  WARN 14544 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 17:08:07.756  WARN 14544 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 17:08:08.087  INFO 14544 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 17:08:08.147  INFO 14544 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:08:08.316  INFO 14544 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 17:08:08.317  INFO 14544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 17:08:08.320  INFO 14544 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 17:08:08.347  INFO 14544 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 17:08:08.554  INFO 14544 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.937 seconds (JVM running for 3.549)
+2022-07-08 17:08:09.576  INFO 14544 --- [http-nio-9002-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 17:08:09.576  INFO 14544 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 17:08:09.582  INFO 14544 --- [http-nio-9002-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2022-07-08 17:08:33.640  INFO 14544 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 17:08:33.746  INFO 14544 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 17:09:14.261  INFO 14544 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:09:14.263  INFO 14544 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 17:09:14.269  INFO 14544 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2022-07-08 17:09:19.781  INFO 24900 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-SENV5GLK with PID 24900 (D:\JetBrainWorkspace\WaiWaiBackend\target\classes started by 26301 in D:\JetBrainWorkspace\WaiWaiBackend)
+2022-07-08 17:09:19.784  INFO 24900 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-08 17:09:20.739  INFO 24900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-08 17:09:20.749  INFO 24900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-08 17:09:20.749  INFO 24900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-08 17:09:20.843  INFO 24900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-08 17:09:20.843  INFO 24900 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1024 ms
+2022-07-08 17:09:21.258  WARN 24900 --- [main] c.b.m.core.metadata.TableInfoHelper      : Can not find table primary key in Class: "com.sdu.waiwaimarket.pojo.CategoryDAO".
+2022-07-08 17:09:21.259  WARN 24900 --- [main] c.b.m.core.injector.DefaultSqlInjector   : class com.sdu.waiwaimarket.pojo.CategoryDAO ,Not found @TableId annotation, Cannot use Mybatis-Plus 'xxById' Method.
+2022-07-08 17:09:21.559  INFO 24900 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-08 17:09:21.619  INFO 24900 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:09:21.749  INFO 24900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-08 17:09:21.750  INFO 24900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-08 17:09:21.752  INFO 24900 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-08 17:09:21.778  INFO 24900 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-08 17:09:21.991  INFO 24900 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 2.529 seconds (JVM running for 3.125)
+2022-07-08 17:09:35.986  INFO 24900 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-08 17:09:35.987  INFO 24900 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-08 17:09:35.992  INFO 24900 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
+2022-07-08 17:10:00.658  INFO 24900 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-08 17:10:00.764  INFO 24900 --- [http-nio-9002-exec-7] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-08 17:14:41.360  INFO 24900 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2022-07-08 17:14:41.363  INFO 24900 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2022-07-08 17:14:41.369  INFO 24900 --- [SpringContextShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
