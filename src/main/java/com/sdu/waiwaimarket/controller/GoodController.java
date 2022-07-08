@@ -118,7 +118,7 @@ public class GoodController {
     //分页查询谋种类的全部的商品
     @RequestMapping(value = "/good/select/categoryPage",method = {RequestMethod.GET})
     public ServerResult goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id) {
-        IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum,pageSize, id);
+        IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum, pageSize, id);
         return new ServerResult(0,"返回分类分页内容成功！",goodVOIPage);
     }
 }
