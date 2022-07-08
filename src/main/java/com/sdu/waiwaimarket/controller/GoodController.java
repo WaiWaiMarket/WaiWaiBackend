@@ -17,10 +17,10 @@ public class GoodController {
 
     //添加商品
     @RequestMapping(value = "/good/insert", method = {RequestMethod.POST})
-    public ServerResult goodInsert(@RequestBody GoodInsertDTO goodInsertDTO){
-        boolean isSuccess = goodService.goodInsert(goodInsertDTO);
-        if (isSuccess)
-            return new ServerResult(0, "成功添加商品数据！",  null);
+    public ServerResult goodInsert(GoodInsertDTO goodInsertDTO){
+        Integer id = goodService.goodInsert(goodInsertDTO);
+        if (id >= 0)
+            return new ServerResult(0, "成功添加商品数据！",  id);
         return new ServerResult(500, "添加商品数据失败！", null);
     }
 
