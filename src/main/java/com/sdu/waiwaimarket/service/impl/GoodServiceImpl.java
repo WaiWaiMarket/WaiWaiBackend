@@ -10,6 +10,7 @@ import com.sdu.waiwaimarket.pojo.*;
 import com.sdu.waiwaimarket.service.GoodService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -23,15 +24,19 @@ public class GoodServiceImpl implements GoodService {
     CategoryMapper categoryMapper;
     @Autowired
     UserMapper userMapper;
+    @Autowired
+    StringRedisTemplate stringRedisTemplate;
 
     //添加商品
     @Override
-    public boolean goodInsert(GoodInsertDTO goodInsertDTO) {
+    public Integer goodInsert(GoodInsertDTO goodInsertDTO) {
         GoodDAO goodDAO = new GoodDAO();
         BeanUtils.copyProperties(goodInsertDTO, goodDAO);
+        goodDAO.setGoodsstatus(0);          //商品状态默认0正常
         Integer num = goodMapper.insert(goodDAO);
+        Integer id = goodDAO.getGoodsid();
 
-        return num >= 1 ? true : false;
+        return id;
     }
 
     @Override
@@ -74,10 +79,27 @@ public class GoodServiceImpl implements GoodService {
         return num >= 1 ? true : false;
     }
 
+    //改变商品状态
+    @Override
+    public boolean goodUpdateStatus(Integer goodsid, Integer status) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsid", goodsid);
+
+
+        GoodDAO goodDAO = new GoodDAO();
+        goodDAO.setGoodsstatus(status);
+
+        Integer num = goodMapper.update(goodDAO, queryWrapper);
+
+        return num >= 1 ? true : false;
+    }
+
+
     @Override
     public List<GoodVO> goodSelectByCategory(Integer id) {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("categoryid", id);
+        queryWrapper.eq("goodsstatus", 0);
 
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
@@ -137,6 +159,7 @@ public class GoodServiceImpl implements GoodService {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("1", 1);
         queryWrapper.orderByDesc("goodsdate");
+        queryWrapper.eq("goodsstatus", 0);
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
         //判断需求数量是否大于数据库数据量
@@ -173,8 +196,10 @@ public class GoodServiceImpl implements GoodService {
     public List<GoodVO> goodSelectByPrice(Integer num) {
         //查找相应商品
         QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsstatus", 0);
         queryWrapper.eq("1", 1);
         queryWrapper.orderByAsc("`goodsprice`");
+
         List<GoodDAO> goodDAOS = goodMapper.selectList(queryWrapper);
         List<GoodVO> goodVOS = new ArrayList<>();
         //判断需求数量是否大于数据库数据量
