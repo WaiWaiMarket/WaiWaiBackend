@@ -10,6 +10,7 @@ public interface GoodService {
     public boolean goodInsertImg(GoodInsertImgDTO insertImgDTO);
     public boolean goodUpdate(GoodUpdateDTO goodUpdateDTO);
     public boolean goodDelete(Integer id);
+    public boolean goodUpdateStatus(Integer goodsid, Integer status);
     public List<GoodVO> goodSelectByCategory(Integer id);
     public GoodVO goodSelectById(Integer id);
     public List<GoodVO> goodSelectByNew(Integer num);

@@ -88,18 +88,28 @@ public class GoodController {
         return new ServerResult(0, "查找商品数据成功！", goodVOS);
     }
 
+    //改变商品状态
+    @RequestMapping(value = "/good/setGoodStatus", method = {RequestMethod.GET})
+    public ServerResult setGoodStatus(Integer goodid, Integer status){
+        boolean isSuccess = goodService.goodUpdateStatus(goodid, status);
+        if (isSuccess)
+            return new ServerResult(0, "成功修改商品状态！",  null);
+        return new ServerResult(500, "修改商品状态失败！", null);
+    }
+
+    //分页查询全部商品
     @RequestMapping(value = "/good/selectAllByPage",method = {RequestMethod.GET})
     public ServerResult goodSelectAllByPage(Integer pageNum, Integer pageSize, String search) {
         IPage<GoodDAO> goodDAOIPage = goodService.goodSelectAll(pageNum,pageSize,search);
         return new ServerResult(0,"返回分页内容成功",goodDAOIPage);
     }
-
+    //分页查询全部商品
     @RequestMapping(value = "/good/selectAllByPage2",method = {RequestMethod.GET})
     public ServerResult goodSelectAllByPage2(Integer pageNum, Integer pageSize, String search) {
         IPage<GoodVO> goodDAOIPage = goodService.goodSelectAll2(pageNum,pageSize,search);
         return new ServerResult(0,"返回分页内容成功",goodDAOIPage);
     }
-
+    //分页查询谋种类的全部的商品
     @RequestMapping(value = "/good/select/categoryPage",method = {RequestMethod.GET})
     public ServerResult goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id) {
         IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum,pageSize, id);
