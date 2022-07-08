@@ -3,6 +3,7 @@ package com.sdu.waiwaimarket.pojo;
 import java.util.Date;
 
 public class WantVO {
+    Integer wantid;
     Integer goodsid;
     String goodsname;
     Integer userid;
@@ -13,6 +14,13 @@ public class WantVO {
     Date goodsdate;
     Integer goodsstatus;
 
+    public Integer getWantid() {
+        return wantid;
+    }
+
+    public void setWantid(Integer wantid) {
+        this.wantid = wantid;
+    }
 
     public Integer getGoodsid() {
         return goodsid;
