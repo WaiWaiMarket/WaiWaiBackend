@@ -57,7 +57,7 @@ public class ImgController {
         fileName = UUID.randomUUID()+suffixName;
 
         String property = System.getProperty("user.dir");
-        String ProfilePhotoSavePath = property + "\\src\\main\\resources\\static\\";
+        String ProfilePhotoSavePath = property + "\\upload\\";
         System.out.println(ProfilePhotoSavePath);
         try {
             //将图片保存到文件夹里

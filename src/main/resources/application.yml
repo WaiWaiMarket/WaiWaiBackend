@@ -25,8 +25,8 @@ logging:
   level:
     com.tedu: debug
 SavePath:
-  ProfilePhoto: '\src\main\resources\static\'  #图标存储路径
-  ProfilePhotoMapper: '/image/'  #图标的映射路径
+  ProfilePhoto: '\upload\'  #图标存储路径
+  ProfilePhotoMapper: '/upload/'  #图标的映射路径
 
 mybatis-plus:
   mapper-locations: classpath:mappers/*.xml

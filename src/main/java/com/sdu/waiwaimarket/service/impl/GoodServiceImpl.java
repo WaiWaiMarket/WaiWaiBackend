@@ -73,7 +73,7 @@ public class GoodServiceImpl implements GoodService {
         Integer num = goodMapper.update(goodDAO, queryWrapper);
 
         Integer id = goodDAO.getGoodsid();
-        //删除指定redis key-value    1
+
         String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
         //如果redis存在则更新
         if(ObjectUtils.isEmpty(value) == false){
@@ -161,7 +161,7 @@ public class GoodServiceImpl implements GoodService {
     //按商品号搜索商品
     @Override
     public GoodVO goodSelectById(Integer id) {
-        //数据不在redis存入redis并设置过期时间为1
+        //数据不在redis存入redis并设置过期时间为1天
         String value = stringRedisTemplate.opsForValue().get(String.valueOf(id));
         if(ObjectUtils.isEmpty(value)){
             //查找商品
