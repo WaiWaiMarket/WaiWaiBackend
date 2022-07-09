@@ -1,36 +1,33 @@
 package com.sdu.waiwaimarket.pojo;
 
+import java.util.Date;
+
 public class WantVO {
-    Integer wantId;//我想要编号
-    Integer userId;//用户编号
-    Integer goodsId;//商品编号
-    String goodsname;//商品名字
-    Integer goodsprice;//商品价格
-    String goodsimg;//图片地址
-    Integer goodsstatus;//商品状态
+    Integer wantid;
+    Integer goodsid;
+    String goodsname;
+    Integer userid;
+    String username;
+    Integer goodsprice;
+    String goodsdesc;
+    String goodslevel;
+    Date goodsdate;
+    Integer goodsstatus;
 
-    public Integer getWantId() {
-        return wantId;
+    public Integer getWantid() {
+        return wantid;
     }
 
-    public void setWantId(Integer wantId) {
-        this.wantId = wantId;
+    public void setWantid(Integer wantid) {
+        this.wantid = wantid;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getGoodsid() {
+        return goodsid;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
-    }
-
-    public Integer getGoodsId() {
-        return goodsId;
-    }
-
-    public void setGoodsId(Integer goodsId) {
-        this.goodsId = goodsId;
+    public void setGoodsid(Integer goodsid) {
+        this.goodsid = goodsid;
     }
 
     public String getGoodsname() {
@@ -41,6 +38,22 @@ public class WantVO {
         this.goodsname = goodsname;
     }
 
+    public Integer getUserid() {
+        return userid;
+    }
+
+    public void setUserid(Integer userid) {
+        this.userid = userid;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public Integer getGoodsprice() {
         return goodsprice;
     }
@@ -49,12 +62,28 @@ public class WantVO {
         this.goodsprice = goodsprice;
     }
 
-    public String getGoodsimg() {
-        return goodsimg;
+    public String getGoodsdesc() {
+        return goodsdesc;
     }
 
-    public void setGoodsimg(String goodsimg) {
-        this.goodsimg = goodsimg;
+    public void setGoodsdesc(String goodsdesc) {
+        this.goodsdesc = goodsdesc;
+    }
+
+    public String getGoodslevel() {
+        return goodslevel;
+    }
+
+    public void setGoodslevel(String goodslevel) {
+        this.goodslevel = goodslevel;
+    }
+
+    public Date getGoodsdate() {
+        return goodsdate;
+    }
+
+    public void setGoodsdate(Date goodsdate) {
+        this.goodsdate = goodsdate;
     }
 
     public Integer getGoodsstatus() {

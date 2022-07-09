@@ -1,22 +1,22 @@
 package com.sdu.waiwaimarket.pojo;
 
 public class WantInsertDTO {
-    Integer userId;
-    Integer goodsId;
+    Integer userid;
+    Integer goodsid;
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUserid() {
+        return userid;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
-    public Integer getGoodsId() {
-        return goodsId;
+    public Integer getGoodsid() {
+        return goodsid;
     }
 
-    public void setGoodsId(Integer goodsId) {
-        this.goodsId = goodsId;
+    public void setGoodsid(Integer goodsid) {
+        this.goodsid = goodsid;
     }
 }
