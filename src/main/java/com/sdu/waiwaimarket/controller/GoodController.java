@@ -17,7 +17,7 @@ public class GoodController {
 
     //添加商品
     @RequestMapping(value = "/good/insert", method = {RequestMethod.POST})
-    public ServerResult goodInsert(@RequestBody GoodInsertDTO goodInsertDTO){
+    public ServerResult goodInsert(GoodInsertDTO goodInsertDTO){
         Integer id = goodService.goodInsert(goodInsertDTO);
         if (id >= 0)
             return new ServerResult(0, "成功添加商品数据！",  id);
@@ -26,7 +26,7 @@ public class GoodController {
 
     //添加商品主图
     @RequestMapping(value = "/good/insertImg", method = {RequestMethod.POST})
-    public ServerResult goodInsertImg(@RequestBody GoodInsertImgDTO goodInsertDTO){
+    public ServerResult goodInsertImg(GoodInsertImgDTO goodInsertDTO){
         boolean isSuccess = goodService.goodInsertImg(goodInsertDTO);
         if (isSuccess)
             return new ServerResult(0, "成功添加商品主图！",  null);
