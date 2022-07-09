@@ -15,7 +15,7 @@ public class GoodController {
     @Autowired
     GoodService goodService;
 
-    //添加商品
+    //添加商品1
     @RequestMapping(value = "/good/insert", method = {RequestMethod.POST})
     public ServerResult goodInsert(GoodInsertDTO goodInsertDTO){
         Integer id = goodService.goodInsert(goodInsertDTO);

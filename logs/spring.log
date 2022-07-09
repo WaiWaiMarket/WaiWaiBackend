@@ -2910,3 +2910,155 @@ Was expecting one of:
 2022-07-09 03:33:44.098  INFO 34932 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
 2022-07-09 03:33:47.480  INFO 34932 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
 2022-07-09 03:33:47.757  INFO 34932 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-09 03:50:30.774  INFO 39608 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 39608 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
+2022-07-09 03:50:30.777  INFO 39608 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-09 03:50:31.604  INFO 39608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-09 03:50:31.606  INFO 39608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-09 03:50:31.636  INFO 39608 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 13ms. Found 0 Redis repository interfaces.
+2022-07-09 03:50:31.878  INFO 39608 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-07-09 03:50:31.887  INFO 39608 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-07-09 03:50:31.891  INFO 39608 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-07-09 03:50:32.002  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.008  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.016  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.020  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.034  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.036  INFO 39608 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:50:32.302  INFO 39608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-09 03:50:32.316  INFO 39608 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-09 03:50:32.317  INFO 39608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-09 03:50:32.423  INFO 39608 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-09 03:50:32.424  INFO 39608 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1600 ms
+2022-07-09 03:50:33.998  INFO 39608 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-09 03:50:34.092  INFO 39608 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 03:50:34.867  INFO 39608 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-07-09 03:50:34.967  INFO 39608 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-07-09 03:50:35.013  INFO 39608 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-07-09 03:50:35.026  INFO 39608 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2022-07-09 03:50:35.045  INFO 39608 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-07-09 03:50:35.045  INFO 39608 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2022-07-09 03:50:35.045  INFO 39608 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-07-09 03:50:35.065  INFO 39608 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-09 03:50:35.066  INFO 39608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-09 03:50:35.069  INFO 39608 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-09 03:50:35.101  INFO 39608 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-09 03:50:35.356  INFO 39608 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 4.95 seconds (JVM running for 5.826)
+2022-07-09 03:50:37.264  INFO 39608 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-09 03:50:37.264  INFO 39608 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-09 03:50:37.271  INFO 39608 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-07-09 03:54:07.411  INFO 39608 --- [http-nio-9002-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-09 03:54:07.530  INFO 39608 --- [http-nio-9002-exec-6] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-09 03:58:05.956  INFO 48744 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 48744 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
+2022-07-09 03:58:05.959  INFO 48744 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-09 03:58:06.769  INFO 48744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-09 03:58:06.771  INFO 48744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-09 03:58:06.797  INFO 48744 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12ms. Found 0 Redis repository interfaces.
+2022-07-09 03:58:07.006  INFO 48744 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-07-09 03:58:07.014  INFO 48744 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-07-09 03:58:07.017  INFO 48744 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-07-09 03:58:07.106  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.110  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.118  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.122  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.136  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.138  INFO 48744 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 03:58:07.351  INFO 48744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-09 03:58:07.360  INFO 48744 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-09 03:58:07.361  INFO 48744 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-09 03:58:07.439  INFO 48744 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-09 03:58:07.439  INFO 48744 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1430 ms
+2022-07-09 03:58:09.034  INFO 48744 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-09 03:58:09.145  INFO 48744 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 03:58:09.925  INFO 48744 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-07-09 03:58:10.015  INFO 48744 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-07-09 03:58:10.060  INFO 48744 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-07-09 03:58:10.073  INFO 48744 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2022-07-09 03:58:10.091  INFO 48744 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-07-09 03:58:10.091  INFO 48744 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2022-07-09 03:58:10.091  INFO 48744 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-07-09 03:58:10.109  INFO 48744 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-09 03:58:10.110  INFO 48744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-09 03:58:10.113  INFO 48744 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-09 03:58:10.137  INFO 48744 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-09 03:58:10.356  INFO 48744 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 4.852 seconds (JVM running for 5.784)
+2022-07-09 03:58:25.371  INFO 48744 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-09 03:58:25.371  INFO 48744 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-09 03:58:25.378  INFO 48744 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2022-07-09 03:58:25.481  INFO 48744 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-09 03:58:25.621  INFO 48744 --- [http-nio-9002-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-09 04:03:28.999  INFO 52656 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 52656 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
+2022-07-09 04:03:29.002  INFO 52656 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-09 04:03:29.921  INFO 52656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-09 04:03:29.923  INFO 52656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-09 04:03:29.947  INFO 52656 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2022-07-09 04:03:30.154  INFO 52656 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-07-09 04:03:30.160  INFO 52656 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-07-09 04:03:30.163  INFO 52656 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-07-09 04:03:30.253  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.258  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.265  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.269  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.284  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.286  INFO 52656 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:03:30.518  INFO 52656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-09 04:03:30.527  INFO 52656 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-09 04:03:30.528  INFO 52656 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-09 04:03:30.613  INFO 52656 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-09 04:03:30.613  INFO 52656 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1567 ms
+2022-07-09 04:03:32.249  INFO 52656 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-09 04:03:32.345  INFO 52656 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 04:03:33.197  INFO 52656 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-07-09 04:03:33.303  INFO 52656 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-07-09 04:03:33.347  INFO 52656 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-07-09 04:03:33.360  INFO 52656 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2022-07-09 04:03:33.377  INFO 52656 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-07-09 04:03:33.377  INFO 52656 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2022-07-09 04:03:33.377  INFO 52656 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-07-09 04:03:33.396  INFO 52656 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-09 04:03:33.397  INFO 52656 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-09 04:03:33.400  INFO 52656 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-09 04:03:33.427  INFO 52656 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-09 04:03:33.689  INFO 52656 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 5.076 seconds (JVM running for 5.954)
+2022-07-09 04:03:35.035  INFO 52656 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-09 04:03:35.036  INFO 52656 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-09 04:03:35.044  INFO 52656 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2022-07-09 04:03:45.913  INFO 52656 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-09 04:03:46.059  INFO 52656 --- [http-nio-9002-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2022-07-09 04:06:50.275  INFO 21268 --- [main] c.s.w.WaiwaimarketApplication            : Starting WaiwaimarketApplication on LAPTOP-LHCFOF67 with PID 21268 (D:\code\newONE\WaiWaiBackend\target\classes started by 12071 in D:\code\newONE\WaiWaiBackend)
+2022-07-09 04:06:50.277  INFO 21268 --- [main] c.s.w.WaiwaimarketApplication            : No active profile set, falling back to default profiles: default
+2022-07-09 04:06:51.080  INFO 21268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode!
+2022-07-09 04:06:51.082  INFO 21268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2022-07-09 04:06:51.106  INFO 21268 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 11ms. Found 0 Redis repository interfaces.
+2022-07-09 04:06:51.332  INFO 21268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2022-07-09 04:06:51.338  INFO 21268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'taskScheduler' has been explicitly defined. Therefore, a default ThreadPoolTaskScheduler will be created.
+2022-07-09 04:06:51.341  INFO 21268 --- [main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2022-07-09 04:06:51.429  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.433  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration' of type [org.springframework.boot.autoconfigure.integration.IntegrationAutoConfiguration$IntegrationJmxConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.441  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration' of type [org.springframework.boot.autoconfigure.jmx.JmxAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.444  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'mbeanServer' of type [com.sun.jmx.mbeanserver.JmxMBeanServer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.460  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.462  INFO 21268 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationDisposableAutoCreatedBeans' of type [org.springframework.integration.config.annotation.Disposables] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2022-07-09 04:06:51.733  INFO 21268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 9002 (http)
+2022-07-09 04:06:51.742  INFO 21268 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2022-07-09 04:06:51.743  INFO 21268 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2022-07-09 04:06:51.834  INFO 21268 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2022-07-09 04:06:51.834  INFO 21268 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1515 ms
+2022-07-09 04:06:53.414  INFO 21268 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2022-07-09 04:06:53.503  INFO 21268 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2022-07-09 04:06:54.392  INFO 21268 --- [main] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2022-07-09 04:06:54.499  INFO 21268 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel nullChannel
+2022-07-09 04:06:54.514  INFO 21268 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageChannel errorChannel
+2022-07-09 04:06:54.565  INFO 21268 --- [main] o.s.i.monitor.IntegrationMBeanExporter   : Registering MessageHandler errorLogger
+2022-07-09 04:06:54.585  INFO 21268 --- [main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2022-07-09 04:06:54.585  INFO 21268 --- [main] o.s.i.channel.PublishSubscribeChannel    : Channel 'application.errorChannel' has 1 subscriber(s).
+2022-07-09 04:06:54.585  INFO 21268 --- [main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2022-07-09 04:06:54.604  INFO 21268 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 9002 (http) with context path ''
+2022-07-09 04:06:54.605  INFO 21268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Documentation plugins bootstrapped
+2022-07-09 04:06:54.609  INFO 21268 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2022-07-09 04:06:54.637  INFO 21268 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2022-07-09 04:06:54.793  INFO 21268 --- [http-nio-9002-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2022-07-09 04:06:54.793  INFO 21268 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2022-07-09 04:06:54.816  INFO 21268 --- [http-nio-9002-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 23 ms
+2022-07-09 04:06:54.930  INFO 21268 --- [main] c.s.w.WaiwaimarketApplication            : Started WaiwaimarketApplication in 5.066 seconds (JVM running for 5.888)
+2022-07-09 04:07:08.334  INFO 21268 --- [http-nio-9002-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2022-07-09 04:07:08.447  INFO 21268 --- [http-nio-9002-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
