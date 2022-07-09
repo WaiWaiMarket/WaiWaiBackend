@@ -51,6 +51,19 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
+    public boolean orderCreate(OrderCreateDTO orderCreateDTO) {
+        QueryWrapper queryWrapper = new QueryWrapper();
+        queryWrapper.eq("goodsid",orderCreateDTO.getGoodsid());
+        OrderDAO orderDAO = new OrderDAO();
+        BeanUtils.copyProperties(orderCreateDTO,orderDAO);
+        GoodDAO goodDAO = goodMapper.selectOne(queryWrapper);
+        orderDAO.setSellid(goodDAO.getUserid());
+        orderDAO.setOrderstatus(0);
+        int insertRow = orderMapper.insert(orderDAO);
+        return insertRow>=1?true:false;
+    }
+
+    @Override
     public boolean orderDelete(Integer orderId) {
         QueryWrapper queryWrapper = new QueryWrapper();
         queryWrapper.eq("orderid",orderId);

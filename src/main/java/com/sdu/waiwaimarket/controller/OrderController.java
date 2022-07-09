@@ -31,9 +31,19 @@ public class OrderController {
     public ServerResult orderInsert(OrderInsertDTO dto){
         boolean isSuccess = orderService.orderInsert(dto);
         if (isSuccess){
-            return new ServerResult(0,"订单添加成功！",null);
+            return new ServerResult(0,"订单插入成功！",null);
         }else{
-            return new ServerResult(301,"订单添加失败！",null);
+            return new ServerResult(301,"订单插入失败！",null);
+        }
+    }
+
+    @RequestMapping(value = "/order/create",method = {RequestMethod.POST})
+    public ServerResult orderCreate(OrderCreateDTO orderCreateDTO){
+        boolean isSuccess = orderService.orderCreate(orderCreateDTO);
+        if (isSuccess){
+            return new ServerResult(0,"订单创建成功！",null);
+        }else{
+            return new ServerResult(301,"订单创建失败！",null);
         }
     }
 

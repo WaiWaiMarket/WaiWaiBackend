@@ -8,6 +8,7 @@ import java.util.List;
 public interface OrderService {
     public boolean orderUpdate(OrderUpdateDTO orderUpdateDTO);
     public boolean orderInsert(OrderInsertDTO orderInsertDTO);
+    public boolean orderCreate(OrderCreateDTO orderCreateDTO);
     public boolean orderDelete(Integer orderId);
     //public List<OrderVO> orderSelectByUserId(Integer userId);
     public IPage<OrderVO> orderSelectByUserIdPage(Integer pageNum, Integer pageSize, Integer userId);
