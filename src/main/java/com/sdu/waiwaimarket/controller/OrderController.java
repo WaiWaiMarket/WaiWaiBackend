@@ -37,7 +37,7 @@ public class OrderController {
         }
     }
 
-    @RequestMapping(value = "/order/create",method = {RequestMethod.POST})
+    @RequestMapping(value = "/order/create",method = {RequestMethod.GET})
     public ServerResult orderCreate(OrderCreateDTO orderCreateDTO){
         boolean isSuccess = orderService.orderCreate(orderCreateDTO);
         if (isSuccess){

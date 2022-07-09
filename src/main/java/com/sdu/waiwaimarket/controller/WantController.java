@@ -19,7 +19,7 @@ public class WantController {
     @Autowired
     WantService wantService;
 
-    @RequestMapping(value = "/want/insert",method = {RequestMethod.GET})
+    @RequestMapping(value = "/want/insert",method = {RequestMethod.GET,RequestMethod.POST})
     public ServerResult wantInsert(WantInsertDTO wantInsertDTO){
         boolean isSuccess = wantService.wantInsert(wantInsertDTO);
         if(isSuccess){
@@ -47,7 +47,7 @@ public class WantController {
         return new ServerResult(0,"查询成功",wantVOS);
     }
 
-    @RequestMapping(value = "/want/selectAllByPage",method = {RequestMethod.POST})
+    @RequestMapping(value = "/want/selectAllByPage",method = {RequestMethod.GET,RequestMethod.POST})
     public ServerResult wantSelectAllByPage(Integer pageNum, Integer pageSize, Integer userId){
         IPage<WantVO> wantVOIPage = wantService.wantSelectAll(pageNum, pageSize, userId);
         return new ServerResult(0,"查询成功",wantVOIPage);
