@@ -7,31 +7,31 @@ import com.baomidou.mybatisplus.annotation.TableName;
 @TableName("want")
 public class WantDAO {
     @TableId(type = IdType.AUTO)
-    Integer wantId;
-    Integer userId;
-    Integer goodsId;
+    Integer wantid;
+    Integer userid;
+    Integer goodsid;
 
-    public Integer getWantId() {
-        return wantId;
+    public Integer getWantid() {
+        return wantid;
     }
 
-    public void setWantId(Integer wantId) {
-        this.wantId = wantId;
+    public void setWantid(Integer wantid) {
+        this.wantid = wantid;
     }
 
-    public Integer getUserId() {
-        return userId;
+    public Integer getUserid() {
+        return userid;
     }
 
-    public void setUserId(Integer userId) {
-        this.userId = userId;
+    public void setUserid(Integer userid) {
+        this.userid = userid;
     }
 
-    public Integer getGoodsId() {
-        return goodsId;
+    public Integer getGoodsid() {
+        return goodsid;
     }
 
-    public void setGoodsId(Integer goodsId) {
-        this.goodsId = goodsId;
+    public void setGoodsid(Integer goodsid) {
+        this.goodsid = goodsid;
     }
 }

@@ -34,9 +34,9 @@ public class ImgController {
     //根据图片id获取图片
     @RequestMapping(value = "/img/one", method = {RequestMethod.GET})
     public ServerResult getImg(Integer id){
-       ImgVO imgVO = imgService.getImg(id);
+        ImgVO imgVO = imgService.getImg(id);
 
-       return new ServerResult(0, "获取图片成功！", imgVO);
+        return new ServerResult(0, "获取图片成功！", imgVO);
     }
 
     @Value("${SavePath.ProfilePhoto}")
@@ -57,7 +57,7 @@ public class ImgController {
         fileName = UUID.randomUUID()+suffixName;
 
         String property = System.getProperty("user.dir");
-        String ProfilePhotoSavePath = property + "\\src\\main\\resources\\static\\";
+        String ProfilePhotoSavePath = property + "\\upload\\";
         System.out.println(ProfilePhotoSavePath);
         try {
             //将图片保存到文件夹里

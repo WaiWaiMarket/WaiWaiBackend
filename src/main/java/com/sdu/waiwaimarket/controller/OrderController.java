@@ -31,9 +31,19 @@ public class OrderController {
     public ServerResult orderInsert(OrderInsertDTO dto){
         boolean isSuccess = orderService.orderInsert(dto);
         if (isSuccess){
-            return new ServerResult(0,"订单添加成功！",null);
+            return new ServerResult(0,"订单插入成功！",null);
         }else{
-            return new ServerResult(301,"订单添加失败！",null);
+            return new ServerResult(301,"订单插入失败！",null);
+        }
+    }
+
+    @RequestMapping(value = "/order/create",method = {RequestMethod.GET})
+    public ServerResult orderCreate(OrderCreateDTO orderCreateDTO){
+        boolean isSuccess = orderService.orderCreate(orderCreateDTO);
+        if (isSuccess){
+            return new ServerResult(0,"订单创建成功！",null);
+        }else{
+            return new ServerResult(301,"订单创建失败！",null);
         }
     }
 
@@ -48,11 +58,11 @@ public class OrderController {
         }
     }
 
-    @RequestMapping(value = "/order/selectByUserId",method = {RequestMethod.GET})
-    public ServerResult orderSelectByUserId(Integer userId){
-        List<OrderVO> voList = orderService.orderSelectByUserId(userId);
-        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
-    }
+//    @RequestMapping(value = "/order/selectByUserId",method = {RequestMethod.GET})
+//    public ServerResult orderSelectByUserId(Integer userId){
+//        List<OrderVO> voList = orderService.orderSelectByUserId(userId);
+//        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
+//    }
 
     @RequestMapping(value = "/order/select/userIdPage",method = {RequestMethod.GET})
     public ServerResult orderSelectByUserIdPage(Integer pageNum, Integer pageSize, Integer userId) {
@@ -60,11 +70,11 @@ public class OrderController {
         return new ServerResult(0,"返回分类分页内容成功！",orderVOIPage);
     }
 
-    @RequestMapping(value = "/order/select/All",method = {RequestMethod.GET})
-    public ServerResult orderSelectAll(){
-        List<OrderVO> voList = orderService.orderSelectAll();
-        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
-    }
+//    @RequestMapping(value = "/order/select/All",method = {RequestMethod.GET})
+//    public ServerResult orderSelectAll(){
+//        List<OrderVO> voList = orderService.orderSelectAll();
+//        return new ServerResult(0,"根据用户编号查询订单成功！",voList);
+//    }
 
     @RequestMapping(value = "/order/select/AllByPage",method = {RequestMethod.GET})
     public ServerResult orderSelectAllByPage(Integer pageNum, Integer pageSize) {

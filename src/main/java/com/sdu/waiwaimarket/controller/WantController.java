@@ -19,8 +19,8 @@ public class WantController {
     @Autowired
     WantService wantService;
 
-    @RequestMapping(value = "/want/insert",method = {RequestMethod.POST})
-    public ServerResult wantInsert(@RequestBody WantInsertDTO wantInsertDTO){
+    @RequestMapping(value = "/want/insert",method = {RequestMethod.GET,RequestMethod.POST})
+    public ServerResult wantInsert(WantInsertDTO wantInsertDTO){
         boolean isSuccess = wantService.wantInsert(wantInsertDTO);
         if(isSuccess){
             return new ServerResult(0,"成功添加到购物车",null);
@@ -30,7 +30,7 @@ public class WantController {
         }
     }
 
-    @RequestMapping(value = "/want/delete")
+    @RequestMapping(value = "/want/delete", method = {RequestMethod.GET})
     public  ServerResult wantDelete(Integer id){
         boolean isSuccess = wantService.wantDelete(id);
         if(isSuccess){
@@ -47,10 +47,10 @@ public class WantController {
         return new ServerResult(0,"查询成功",wantVOS);
     }
 
-    @RequestMapping(value = "/want/selectAllByPage",method = {RequestMethod.POST})
+    @RequestMapping(value = "/want/selectAllByPage",method = {RequestMethod.GET,RequestMethod.POST})
     public ServerResult wantSelectAllByPage(Integer pageNum, Integer pageSize, Integer userId){
-        IPage<WantDAO> wantDAOIPage = wantService.wantSelectAll(pageNum, pageSize, userId);
-        return new ServerResult(0,"查询成功",wantDAOIPage);
+        IPage<WantVO> wantVOIPage = wantService.wantSelectAll(pageNum, pageSize, userId);
+        return new ServerResult(0,"查询成功",wantVOIPage);
     }
 
 }

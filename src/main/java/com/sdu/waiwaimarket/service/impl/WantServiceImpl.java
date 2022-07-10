@@ -53,26 +53,20 @@ public class WantServiceImpl implements WantService {
         List<WantVO> wantVOS = new ArrayList<>();
         for(WantDAO wantDAO:daoList){
             WantVO wantVO = new WantVO();
-            int goodId=wantDAO.getGoodsId();
+            int goodId=wantDAO.getGoodsid();
             BeanUtils.copyProperties(goodService.goodSelectById(goodId),wantVO);
-            wantVO.setUserId(wantDAO.getUserId());
-            wantVO.setWantId(wantDAO.getWantId());
+            wantVO.setUserid(wantDAO.getUserid());
+
             wantVOS.add(wantVO);
         }
         return wantVOS;
     }
 
     @Override
-    public IPage<WantDAO> wantSelectAll(Integer pageNum, Integer pageSize, Integer userId) {
-        Page<WantDAO> page = new Page(pageNum, pageSize);
-        if(userId == null){
-            IPage<WantDAO> wantDAOPage = wantMapper.selectPage(page, null);
-            return wantDAOPage;
-        }
-        /*else {
-            IPage<WantDAO> wantDAOIPage = wantMapper.selectByPage(page, userId);
-            return  wantDAOIPage;
-        }*/
-        return null;
+    public IPage<WantVO> wantSelectAll(Integer pageNum, Integer pageSize, Integer userId) {
+        Page<WantVO> page = new Page(pageNum, pageSize);
+        IPage<WantVO> productIPage = wantMapper.wantSelectAll(page, userId);
+
+        return productIPage;
     }
 }

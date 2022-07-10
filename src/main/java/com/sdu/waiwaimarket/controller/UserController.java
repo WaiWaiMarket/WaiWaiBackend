@@ -42,7 +42,7 @@ public class UserController {
 
     //用户注册
     @RequestMapping("/user/UserRegister")
-    public ServerResult UserRegister(UserRegisterDTO userRegisterDTO){
+    public ServerResult UserRegister(@RequestBody UserRegisterDTO userRegisterDTO){
         Integer id = userService.UserRegister(userRegisterDTO);
         return new ServerResult(0,"注册成功",id);
     }

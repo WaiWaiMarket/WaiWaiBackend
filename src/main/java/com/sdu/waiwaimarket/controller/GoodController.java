@@ -17,7 +17,7 @@ public class GoodController {
 
     //添加商品
     @RequestMapping(value = "/good/insert", method = {RequestMethod.POST})
-    public ServerResult goodInsert(GoodInsertDTO goodInsertDTO){
+    public ServerResult goodInsert(@RequestBody GoodInsertDTO goodInsertDTO){
         Integer id = goodService.goodInsert(goodInsertDTO);
         if (id >= 0)
             return new ServerResult(0, "成功添加商品数据！",  id);
@@ -26,7 +26,7 @@ public class GoodController {
 
     //添加商品主图
     @RequestMapping(value = "/good/insertImg", method = {RequestMethod.POST})
-    public ServerResult goodInsertImg(GoodInsertImgDTO goodInsertDTO){
+    public ServerResult goodInsertImg(@RequestBody GoodInsertImgDTO goodInsertDTO){
         boolean isSuccess = goodService.goodInsertImg(goodInsertDTO);
         if (isSuccess)
             return new ServerResult(0, "成功添加商品主图！",  null);
@@ -35,7 +35,7 @@ public class GoodController {
 
     //修改商品
     @RequestMapping(value = "/good/update", method = {RequestMethod.POST})
-    public ServerResult goodUpdate(GoodUpdateDTO goodUpdateDTO){
+    public ServerResult goodUpdate(@RequestBody GoodUpdateDTO goodUpdateDTO){
         boolean isSuccess = goodService.goodUpdate(goodUpdateDTO);
         if (isSuccess)
             return new ServerResult(0, "成功修改商品数据！",  null);
@@ -118,7 +118,7 @@ public class GoodController {
     //分页查询谋种类的全部的商品
     @RequestMapping(value = "/good/select/categoryPage",method = {RequestMethod.GET})
     public ServerResult goodSelectByCategoryPage(Integer pageNum, Integer pageSize, Integer id) {
-        IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum,pageSize, id);
+        IPage<GoodVO> goodVOIPage = goodService.goodSelectByCategoryPage(pageNum, pageSize, id);
         return new ServerResult(0,"返回分类分页内容成功！",goodVOIPage);
     }
 }
